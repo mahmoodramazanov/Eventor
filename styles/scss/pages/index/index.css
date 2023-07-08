@@ -1,1 +1,400 @@
-/*# sourceMappingURL=index.css.map */
+body {
+  font-family: "Outfit", sans-serif;
+  height: 200vh;
+  overflow-x: hidden;
+}
+body header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: white;
+  padding: 10px 10px;
+  position: sticky;
+  top: 0;
+  width: calc(100% + 10px + 10px);
+  z-index: 4;
+}
+body header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1229px;
+}
+body header div nav ul {
+  display: flex;
+  gap: 20px;
+}
+body header div nav ul li {
+  list-style-type: none;
+}
+body header div nav ul li a {
+  text-decoration: none;
+}
+body header div nav ul li a:hover {
+  cursor: pointer;
+}
+body header div .right {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: row;
+  gap: 15px;
+}
+body header div .right i {
+  font-size: 26px;
+}
+body header div .right i:hover {
+  cursor: pointer;
+}
+body header div .right button {
+  width: 142px;
+  height: 48px;
+  background: linear-gradient(to right, #7B68EE, #e600ff);
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 550;
+  color: #ffffff;
+  border-radius: 26px;
+  border: none;
+}
+body header div .right button:hover {
+  background: #6f42c1;
+}
+body .bash-hisse {
+  background-image: url("../../../../assests/images/home-conference-video-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .bash-hisse #homePages {
+  width: 100%;
+  max-width: 1229px;
+  margin: auto;
+  position: relative;
+}
+body .bash-hisse #homePages .yuxari {
+  height: 720px;
+  padding-top: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: row;
+  position: relative;
+}
+body .bash-hisse #homePages .yuxari h2 {
+  position: absolute;
+  top: 388px;
+  left: -20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: sans-serif;
+  font-size: 190px;
+  font-weight: bolder;
+  animation: toRight-slow 8s linear infinite;
+  min-width: 1000px;
+}
+@keyframes toRight-slow {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(60px) translateY(0);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+body .bash-hisse #homePages .yuxari img {
+  position: absolute;
+}
+body .bash-hisse #homePages .yuxari img:nth-child(1) {
+  top: 60px;
+  left: 0;
+  animation: toRight 7s linear infinite;
+}
+@keyframes toRight {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(70px) translateY(0);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+body .bash-hisse #homePages .yuxari img:nth-child(2) {
+  top: 10px;
+  right: 10px;
+  animation: toRight 7s linear infinite;
+}
+@keyframes toRight {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(70px) translateY(0);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+body .bash-hisse #homePages .yuxari img:nth-child(3) {
+  bottom: -136px;
+  left: calc(100% - 10px);
+  animation: toRight-slow 8s linear infinite;
+}
+@keyframes toRight-slow {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-60px) translateY(0);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+body .bash-hisse #homePages .yuxari .content {
+  z-index: 1;
+}
+body .bash-hisse #homePages .yuxari .content .yazi h3 {
+  font-family: sans-serif;
+  font-size: 58px;
+  font-weight: 700;
+}
+body .bash-hisse #homePages .yuxari .content .yazi p {
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 36px 0;
+}
+body .bash-hisse #homePages .yuxari .content .btns {
+  padding: 36px 0;
+}
+body .bash-hisse #homePages .yuxari .content .btns button {
+  width: 142px;
+  height: 48px;
+  background: linear-gradient(to right, #7B68EE, #e600ff);
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 550;
+  color: #ffffff;
+  border-radius: 26px;
+  border: none;
+}
+body .bash-hisse #homePages .yuxari .content .btns button:hover {
+  background: #6f42c1;
+}
+body .bash-hisse #homePages .yuxari .content .btns button:last-child {
+  color: #6f42c1;
+  background: transparent;
+}
+body .bash-hisse #homePages .yuxari .content .btns button:last-child:hover {
+  background: #6f42c1;
+  color: #ffffff;
+}
+body .bash-hisse #homePages .yuxari iframe {
+  z-index: 1;
+  width: 30%;
+  height: 22vw;
+  max-height: 300px;
+  border-radius: 20px;
+  animation: toBottom 7s linear infinite;
+}
+@keyframes toBottom {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(0) translateY(-36px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+body .ashagi {
+  padding: 0 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .ashagi .timer {
+  width: 100%;
+  max-width: 1229px;
+  height: 187px;
+  width: 100%;
+  background-image: url("../../../../assests/images/timer-bg.png");
+  background-size: 100% 187px;
+  background-repeat: no-repeat;
+  position: relative;
+  top: -100px;
+  padding-left: 26px;
+  padding-right: 26px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  z-index: 1;
+  box-shadow: 0 20px 120px rgba(111, 66, 193, 0.4);
+  border-radius: 22px;
+}
+body .ashagi .timer .time-unit {
+  text-align: center;
+}
+body .ashagi .timer .time-unit p:first-child {
+  background: linear-gradient(to right, #7B68EE, #e600ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: sans-serif;
+  font-size: 52px;
+  font-weight: 600;
+}
+body .ashagi .timer .time-unit p:last-child {
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 18px;
+}
+body .ashagi .conf-contact {
+  width: 100%;
+  max-width: 1229px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+body .ashagi .conf-contact .contact-tool {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  height: 66px;
+  width: calc((100% - 40px) / 3);
+  border: 1px solid black;
+  border-radius: 5px;
+}
+body .ashagi .conf-contact .contact-tool i {
+  color: purple;
+  font-size: 24px;
+}
+body .ashagi .conf-contact .contact-tool a {
+  text-decoration: none;
+  color: black;
+}
+body .bg-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .bg-2 #about {
+  width: 100%;
+  max-width: 1229px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 10px;
+  text-align: center;
+}
+body .bg-2 #about .about-oval {
+  background-color: rgba(102, 0, 204, 0.1019607843);
+  color: #6f42c1;
+  font-size: 14px;
+  font-weight: 400;
+  height: 30px;
+  border-radius: 15px;
+  padding-left: 18px;
+  padding-right: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 120px;
+}
+body .bg-2 #about .yazi h3 {
+  font-family: sans-serif;
+  font-size: 40px;
+  font-weight: 580;
+  padding: 20px 8%;
+}
+body .bg-2 #about .yazi p {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: silver;
+  padding: 20px 8%;
+}
+body .bg-2 #about .about-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  margin-top: 30px;
+  padding-bottom: 90px;
+  border-bottom: 1px solid black;
+}
+body .bg-2 #about .about-cards div {
+  position: relative;
+}
+body .bg-2 #about .about-cards div img {
+  width: 100%;
+  height: 100%;
+}
+body .bg-2 #about .about-cards div .date-info {
+  position: absolute;
+  bottom: 15%;
+  left: 40px;
+  text-align: start;
+}
+body .bg-2 #about .about-cards div .date-info p:first-child {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+body .bg-2 #about .about-cards div .date-info p:last-child {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin-top: 20px;
+}
+body .bg-2 #about .about-cards div .play {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(240, 237, 237, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  bottom: 18%;
+  right: 10%;
+  border-radius: 5px;
+}
+body .bg-2 #about .about-cards div .play:hover {
+  background-color: #6f42c1;
+}
+body .bg-2 #about .about-cards div:nth-child(1) {
+  grid-area: 1/1/2/3;
+}
+body .bg-2 #about .about-cards div:nth-child(2) {
+  grid-area: 1/3/2/4;
+}
+body .bg-2 #about .about-cards div:nth-child(3) {
+  grid-area: 1/4/2/5;
+}/*# sourceMappingURL=index.css.map */

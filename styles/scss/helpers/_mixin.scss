@@ -1,0 +1,52 @@
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+@mixin font($family, $size, $weight) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+}
+@mixin max-hudud($widht) {
+  width: 100%;
+  max-width: $widht;
+}
+@mixin btn-blue-purple {
+  width: 142px;
+  height: 48px;
+  background: linear-gradient(to right, $blue, $light-purple);
+  @include font(sans-serif, 16px, 550);
+  color: $white;
+  border-radius: 26px;
+  border: none;
+  &:hover {
+    background: $purple;
+  }
+}
+@mixin animation-lr($name, $trX, $trY, $duration){
+  @keyframes #{$name} {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX($trX) translateY($trY);
+    }
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+  animation: $name $duration linear infinite;
+}
+@mixin inf-cherchive($bg-color, $color){
+  background-color: $bg-color;
+  color: $color;
+  font-size: 14px;
+  font-weight: 400;
+  height: 30px;
+  border-radius: 15px;
+  padding-left: 18px;
+  padding-right: 18px;
+  @include flex(center, center, row);
+}
