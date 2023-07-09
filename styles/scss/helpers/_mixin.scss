@@ -23,6 +23,7 @@
   border: none;
   &:hover {
     background: $purple;
+    cursor: pointer;
   }
 }
 @mixin animation-lr($name, $trX, $trY, $duration){
@@ -39,9 +40,9 @@
   }
   animation: $name $duration linear infinite;
 }
-@mixin inf-cherchive($bg-color, $color){
-  background-color: $bg-color;
-  color: $color;
+@mixin inf-cherchive{
+  background-color: #6600cc1a;
+  color: $purple;
   font-size: 14px;
   font-weight: 400;
   height: 30px;
