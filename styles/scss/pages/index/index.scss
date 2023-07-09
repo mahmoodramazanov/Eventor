@@ -59,7 +59,7 @@ body {
       margin: auto;
       position: relative;
       .yuxari {
-        height: 720px;
+        // height: 720px;
         padding-top: 180px;
         @include flex(space-between, start, row);
         position: relative;
@@ -114,15 +114,20 @@ body {
                 color: $white;
               }
             }
+            margin-bottom: 220px;
           }
         }
-        iframe {
-          z-index: 1;
+        .iframe-div {
           width: 30%;
-          height: 22vw;
           max-height: 300px;
-          border-radius: 20px;
-          @include animation-lr(toBottom, 0, -36px, 7s);
+          height: 22vw;
+          iframe {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            border-radius: 20px;
+            @include animation-lr(toBottom, 0, -36px, 7s);
+          }
         }
       }
     }
@@ -168,13 +173,15 @@ body {
       position: relative;
       width: 100%;
       @include flex(space-between, center, row);
+      
       gap: 20px;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       .contact-tool {
         @include flex(center, center, row);
         gap: 10px;
         height: 66px;
         width: calc((100% - 40px) / 3);
+        min-width: 300px;
         border: 1px solid black;
         border-radius: 5px;
         i {
@@ -354,7 +361,7 @@ body {
               box-shadow: 0 0 30px rgba($purple, 0.3);
             }
             .profile-image {
-              border-radius: 50%;
+              // border-radius: 50%;
               overflow: hidden;
             }
             .name-date-time {
@@ -382,6 +389,7 @@ body {
               }
             }
             .card-btn {
+              @include flex(center, center,row);
               button {
                 @include btn-blue-purple;
               }
@@ -846,10 +854,12 @@ body {
       display: grid;
       grid-template-columns: 35% 16% 16% 25%;
       grid-template-rows: 1fr;
-      grid-column-gap: 80px;
+      grid-column-gap: 60px;
       grid-row-gap: 0px;
       color: white;
       padding-top: 80px;
+      padding-left: 40px;
+      padding-right: 40px;
       margin-left: 40px;
       margin-right: 40px;
       .eventor {
@@ -919,9 +929,5 @@ body {
       }
     }
   }
-  @media screen and (max-width: $tablet-max) {
-    header{
-      
-    }
-  }
 }
+@import "./_index-tablet.scss";
