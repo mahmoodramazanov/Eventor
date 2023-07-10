@@ -4,72 +4,68 @@ body {
   font-family: "Outfit", sans-serif;
   overflow-x: hidden;
   header {
-    @include flex(center, center, row);
-    background-color: white;
-    position: sticky;
-    top: 0;
-    z-index: 4;
     padding: 0 $umumi-padding;
     .inner-box {
-      .right {
-        .burger-menu {
-          width: 34px;
-          height: 34px;
-          padding: 5px;
-          border-radius: 3px;
-          background-color: blue;
-          display: none;
-          position: relative;
-          div {
-            // width: 24px;
-            // max-height: 1px;
-            background-color: rgb(170, 115, 115);
-            // position: absolute;
-            // &:nth-child(1){
-            //   top: 5px;
-          }
-          &:nth-child(2) {
-            top: 10px;
-          }
-          &:nth-child(3) {
-            top: 25px;
-          }
-        }
-      }
-    }
-  }
-
-  div {
-    @include flex(space-between, center, row);
-    width: 100%;
-    @include max-hudud($laptop-max);
-    padding: 6px 0;
-    nav {
-      ul {
-        display: flex;
-        gap: 20px;
-        li {
-          list-style-type: none;
-          a {
-            text-decoration: none;
-            &:hover {
-              cursor: pointer;
+      @include flex(space-between, center, row);
+      width: 100%;
+      @include max-hudud($laptop-max);
+      padding: 6px 0;
+      nav {
+        ul {
+          display: flex;
+          gap: 20px;
+          li {
+            list-style-type: none;
+            a {
+              text-decoration: none;
+              &:hover {
+                cursor: pointer;
+              }
             }
           }
         }
       }
-    }
-    .right {
-      @include flex(right, center, row);
-      gap: 15px;
-      i {
-        font-size: 26px;
-        &:hover {
-          cursor: pointer;
+      .right {
+        @include flex(right, center, row);
+        gap: 15px;
+        i {
+          font-size: 26px;
+          &:hover {
+            cursor: pointer;
+          }
         }
-      }
-      button {
-        @include btn-blue-purple;
+        button {
+          @include btn-blue-purple;
+        }
+        .burger-menu {
+          width: 34px;
+          height: 34px;
+          padding: 8px 5px;
+          border-radius: 3px;
+          border: 1px solid silver;
+          background-color: rgb(238, 238, 238);
+          background-color: #f0eded;
+          display: none;
+          position: relative;
+          &:hover{
+            cursor: pointer;
+          }
+          div {
+            width: 24px;
+            height: 2px;
+            background-color: silver;
+            position: absolute;
+            &:nth-child(1){
+
+            }
+            &:nth-child(2){
+              top: 14px;
+            }
+            &:nth-child(3){
+              top: 20px;
+            }
+          }
+        }
       }
     }
   }

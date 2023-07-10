@@ -3,35 +3,9 @@ body {
   overflow-x: hidden;
 }
 body header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  background-color: white;
-  position: sticky;
-  top: 0;
-  z-index: 4;
   padding: 0 10px;
 }
-body header .inner-box .right .burger-menu {
-  width: 34px;
-  height: 34px;
-  padding: 5px;
-  border-radius: 3px;
-  background-color: blue;
-  display: none;
-  position: relative;
-}
-body header .inner-box .right .burger-menu div {
-  background-color: rgb(170, 115, 115);
-}
-body header .inner-box .right .burger-menu:nth-child(2) {
-  top: 10px;
-}
-body header .inner-box .right .burger-menu:nth-child(3) {
-  top: 25px;
-}
-body div {
+body header .inner-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,33 +15,33 @@ body div {
   max-width: 1229px;
   padding: 6px 0;
 }
-body div nav ul {
+body header .inner-box nav ul {
   display: flex;
   gap: 20px;
 }
-body div nav ul li {
+body header .inner-box nav ul li {
   list-style-type: none;
 }
-body div nav ul li a {
+body header .inner-box nav ul li a {
   text-decoration: none;
 }
-body div nav ul li a:hover {
+body header .inner-box nav ul li a:hover {
   cursor: pointer;
 }
-body div .right {
+body header .inner-box .right {
   display: flex;
   justify-content: right;
   align-items: center;
   flex-direction: row;
   gap: 15px;
 }
-body div .right i {
+body header .inner-box .right i {
   font-size: 26px;
 }
-body div .right i:hover {
+body header .inner-box .right i:hover {
   cursor: pointer;
 }
-body div .right button {
+body header .inner-box .right button {
   width: 142px;
   height: 48px;
   background: linear-gradient(to right, #7B68EE, #e600ff);
@@ -78,9 +52,35 @@ body div .right button {
   border-radius: 26px;
   border: none;
 }
-body div .right button:hover {
+body header .inner-box .right button:hover {
   background: #6f42c1;
   cursor: pointer;
+}
+body header .inner-box .right .burger-menu {
+  width: 34px;
+  height: 34px;
+  padding: 8px 5px;
+  border-radius: 3px;
+  border: 1px solid silver;
+  background-color: rgb(238, 238, 238);
+  background-color: #f0eded;
+  display: none;
+  position: relative;
+}
+body header .inner-box .right .burger-menu:hover {
+  cursor: pointer;
+}
+body header .inner-box .right .burger-menu div {
+  width: 24px;
+  height: 2px;
+  background-color: silver;
+  position: absolute;
+}
+body header .inner-box .right .burger-menu div:nth-child(2) {
+  top: 14px;
+}
+body header .inner-box .right .burger-menu div:nth-child(3) {
+  top: 20px;
 }
 
 .bash-hisse {
