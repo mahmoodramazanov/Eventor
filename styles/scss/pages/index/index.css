@@ -13,7 +13,25 @@ body header {
   z-index: 4;
   padding: 0 10px;
 }
-body header div {
+body header .inner-box .right .burger-menu {
+  width: 34px;
+  height: 34px;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: blue;
+  display: none;
+  position: relative;
+}
+body header .inner-box .right .burger-menu div {
+  background-color: rgb(170, 115, 115);
+}
+body header .inner-box .right .burger-menu:nth-child(2) {
+  top: 10px;
+}
+body header .inner-box .right .burger-menu:nth-child(3) {
+  top: 25px;
+}
+body div {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,33 +41,33 @@ body header div {
   max-width: 1229px;
   padding: 6px 0;
 }
-body header div nav ul {
+body div nav ul {
   display: flex;
   gap: 20px;
 }
-body header div nav ul li {
+body div nav ul li {
   list-style-type: none;
 }
-body header div nav ul li a {
+body div nav ul li a {
   text-decoration: none;
 }
-body header div nav ul li a:hover {
+body div nav ul li a:hover {
   cursor: pointer;
 }
-body header div .right {
+body div .right {
   display: flex;
   justify-content: right;
   align-items: center;
   flex-direction: row;
   gap: 15px;
 }
-body header div .right i {
+body div .right i {
   font-size: 26px;
 }
-body header div .right i:hover {
+body div .right i:hover {
   cursor: pointer;
 }
-body header div .right button {
+body div .right button {
   width: 142px;
   height: 48px;
   background: linear-gradient(to right, #7B68EE, #e600ff);
@@ -60,11 +78,12 @@ body header div .right button {
   border-radius: 26px;
   border: none;
 }
-body header div .right button:hover {
+body div .right button:hover {
   background: #6f42c1;
   cursor: pointer;
 }
-body .bash-hisse {
+
+.bash-hisse {
   background-image: url("../../../../assests/images/home-conference-video-bg.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -73,13 +92,13 @@ body .bash-hisse {
   flex-direction: column;
   align-items: center;
 }
-body .bash-hisse #homePages {
+.bash-hisse #homePages {
   width: 100%;
   max-width: 1229px;
   margin: auto;
   position: relative;
 }
-body .bash-hisse #homePages .yuxari {
+.bash-hisse #homePages .yuxari {
   padding-top: 180px;
   display: flex;
   justify-content: space-between;
@@ -87,7 +106,7 @@ body .bash-hisse #homePages .yuxari {
   flex-direction: row;
   position: relative;
 }
-body .bash-hisse #homePages .yuxari h2 {
+.bash-hisse #homePages .yuxari h2 {
   position: absolute;
   top: 388px;
   left: -20px;
@@ -109,10 +128,10 @@ body .bash-hisse #homePages .yuxari h2 {
     transform: translateX(0) translateY(0);
   }
 }
-body .bash-hisse #homePages .yuxari img {
+.bash-hisse #homePages .yuxari img {
   position: absolute;
 }
-body .bash-hisse #homePages .yuxari img:nth-child(1) {
+.bash-hisse #homePages .yuxari img:nth-child(1) {
   top: 60px;
   left: 0;
   animation: toRight 7s linear infinite;
@@ -128,7 +147,7 @@ body .bash-hisse #homePages .yuxari img:nth-child(1) {
     transform: translateX(0) translateY(0);
   }
 }
-body .bash-hisse #homePages .yuxari img:nth-child(2) {
+.bash-hisse #homePages .yuxari img:nth-child(2) {
   top: 10px;
   right: 10px;
   animation: toRight 7s linear infinite;
@@ -144,7 +163,7 @@ body .bash-hisse #homePages .yuxari img:nth-child(2) {
     transform: translateX(0) translateY(0);
   }
 }
-body .bash-hisse #homePages .yuxari img:nth-child(3) {
+.bash-hisse #homePages .yuxari img:nth-child(3) {
   bottom: -136px;
   left: calc(100% - 10px);
   animation: toRight-slow 8s linear infinite;
@@ -160,25 +179,25 @@ body .bash-hisse #homePages .yuxari img:nth-child(3) {
     transform: translateX(0) translateY(0);
   }
 }
-body .bash-hisse #homePages .yuxari .content {
+.bash-hisse #homePages .yuxari .content {
   z-index: 1;
 }
-body .bash-hisse #homePages .yuxari .content .yazi h3 {
+.bash-hisse #homePages .yuxari .content .yazi h3 {
   font-family: sans-serif;
   font-size: 58px;
   font-weight: 700;
 }
-body .bash-hisse #homePages .yuxari .content .yazi p {
+.bash-hisse #homePages .yuxari .content .yazi p {
   font-family: sans-serif;
   font-size: 20px;
   font-weight: 400;
   margin: 36px 0;
 }
-body .bash-hisse #homePages .yuxari .content .btns {
+.bash-hisse #homePages .yuxari .content .btns {
   padding: 36px 0;
   margin-bottom: 220px;
 }
-body .bash-hisse #homePages .yuxari .content .btns button {
+.bash-hisse #homePages .yuxari .content .btns button {
   width: 142px;
   height: 48px;
   background: linear-gradient(to right, #7B68EE, #e600ff);
@@ -189,24 +208,24 @@ body .bash-hisse #homePages .yuxari .content .btns button {
   border-radius: 26px;
   border: none;
 }
-body .bash-hisse #homePages .yuxari .content .btns button:hover {
+.bash-hisse #homePages .yuxari .content .btns button:hover {
   background: #6f42c1;
   cursor: pointer;
 }
-body .bash-hisse #homePages .yuxari .content .btns button:last-child {
+.bash-hisse #homePages .yuxari .content .btns button:last-child {
   color: #6f42c1;
   background: transparent;
 }
-body .bash-hisse #homePages .yuxari .content .btns button:last-child:hover {
+.bash-hisse #homePages .yuxari .content .btns button:last-child:hover {
   background: #6f42c1;
   color: #ffffff;
 }
-body .bash-hisse #homePages .yuxari .iframe-div {
+.bash-hisse #homePages .yuxari .iframe-div {
   width: 30%;
   max-height: 300px;
   height: 22vw;
 }
-body .bash-hisse #homePages .yuxari .iframe-div iframe {
+.bash-hisse #homePages .yuxari .iframe-div iframe {
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -224,14 +243,15 @@ body .bash-hisse #homePages .yuxari .iframe-div iframe {
     transform: translateX(0) translateY(0);
   }
 }
-body .ashagi {
+
+.ashagi {
   padding: 0 10px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-body .ashagi .timer {
+.ashagi .timer {
   width: 100%;
   max-width: 1229px;
   height: 187px;
@@ -251,10 +271,10 @@ body .ashagi .timer {
   box-shadow: 0 20px 120px rgba(111, 66, 193, 0.4);
   border-radius: 22px;
 }
-body .ashagi .timer .time-unit {
+.ashagi .timer .time-unit {
   text-align: center;
 }
-body .ashagi .timer .time-unit p:first-child {
+.ashagi .timer .time-unit p:first-child {
   background: linear-gradient(to right, #7B68EE, #e600ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -262,13 +282,13 @@ body .ashagi .timer .time-unit p:first-child {
   font-size: 52px;
   font-weight: 600;
 }
-body .ashagi .timer .time-unit p:last-child {
+.ashagi .timer .time-unit p:last-child {
   font-family: sans-serif;
   font-size: 20px;
   font-weight: 700;
   padding-top: 18px;
 }
-body .ashagi .conf-contact {
+.ashagi .conf-contact {
   width: 100%;
   max-width: 1229px;
   position: relative;
@@ -280,7 +300,7 @@ body .ashagi .conf-contact {
   gap: 20px;
   flex-wrap: nowrap;
 }
-body .ashagi .conf-contact .contact-tool {
+.ashagi .conf-contact .contact-tool {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -292,21 +312,22 @@ body .ashagi .conf-contact .contact-tool {
   border: 1px solid black;
   border-radius: 5px;
 }
-body .ashagi .conf-contact .contact-tool i {
+.ashagi .conf-contact .contact-tool i {
   color: purple;
   font-size: 24px;
 }
-body .ashagi .conf-contact .contact-tool a {
+.ashagi .conf-contact .contact-tool a {
   text-decoration: none;
   color: black;
 }
-body .bg-2 {
+
+.bg-2 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-body .bg-2 #about {
+.bg-2 #about {
   width: 100%;
   max-width: 1229px;
   display: flex;
@@ -316,7 +337,7 @@ body .bg-2 #about {
   padding: 0 10px;
   text-align: center;
 }
-body .bg-2 #about .about-oval {
+.bg-2 #about .about-oval {
   background-color: rgba(102, 0, 204, 0.1019607843);
   color: #6f42c1;
   font-size: 14px;
@@ -331,20 +352,20 @@ body .bg-2 #about .about-oval {
   flex-direction: row;
   margin-top: 120px;
 }
-body .bg-2 #about .yazi h3 {
+.bg-2 #about .yazi h3 {
   font-family: sans-serif;
   font-size: 40px;
   font-weight: 580;
   padding: 20px 8%;
 }
-body .bg-2 #about .yazi p {
+.bg-2 #about .yazi p {
   font-family: sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: silver;
   padding: 20px 8%;
 }
-body .bg-2 #about .about-cards {
+.bg-2 #about .about-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
@@ -354,33 +375,33 @@ body .bg-2 #about .about-cards {
   padding-bottom: 90px;
   border-bottom: 1px solid silver;
 }
-body .bg-2 #about .about-cards div {
+.bg-2 #about .about-cards div {
   position: relative;
 }
-body .bg-2 #about .about-cards div img {
+.bg-2 #about .about-cards div img {
   width: 100%;
   height: 100%;
 }
-body .bg-2 #about .about-cards div .date-info {
+.bg-2 #about .about-cards div .date-info {
   position: absolute;
   bottom: 15%;
   left: 40px;
   text-align: start;
 }
-body .bg-2 #about .about-cards div .date-info p:first-child {
+.bg-2 #about .about-cards div .date-info p:first-child {
   font-family: sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: white;
 }
-body .bg-2 #about .about-cards div .date-info p:last-child {
+.bg-2 #about .about-cards div .date-info p:last-child {
   font-family: sans-serif;
   font-size: 18px;
   font-weight: 600;
   color: white;
   margin-top: 20px;
 }
-body .bg-2 #about .about-cards div .play {
+.bg-2 #about .about-cards div .play {
   width: 40px;
   height: 40px;
   background-color: rgba(240, 237, 237, 0.8);
@@ -393,33 +414,33 @@ body .bg-2 #about .about-cards div .play {
   right: 10%;
   border-radius: 5px;
 }
-body .bg-2 #about .about-cards div .play:hover {
+.bg-2 #about .about-cards div .play:hover {
   background-color: #6f42c1;
 }
-body .bg-2 #about .about-cards div:nth-child(1) {
+.bg-2 #about .about-cards div:nth-child(1) {
   grid-area: 1/1/2/3;
 }
-body .bg-2 #about .about-cards div:nth-child(2) {
+.bg-2 #about .about-cards div:nth-child(2) {
   grid-area: 1/3/2/4;
 }
-body .bg-2 #about .about-cards div:nth-child(3) {
+.bg-2 #about .about-cards div:nth-child(3) {
   grid-area: 1/4/2/5;
 }
-body .bg-2 #schedule {
+.bg-2 #schedule {
   width: 100%;
   position: relative;
   width: 100%;
   max-width: 1229px;
   padding: 96px 10px;
 }
-body .bg-2 #schedule .schedule-head {
+.bg-2 #schedule .schedule-head {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
 }
-body .bg-2 #schedule .schedule-head div {
+.bg-2 #schedule .schedule-head div {
   background-color: rgba(102, 0, 204, 0.1019607843);
   color: #6f42c1;
   font-size: 14px;
@@ -433,19 +454,19 @@ body .bg-2 #schedule .schedule-head div {
   align-items: center;
   flex-direction: row;
 }
-body .bg-2 #schedule .schedule-head h3 {
+.bg-2 #schedule .schedule-head h3 {
   font-family: sans-serif;
   font-size: 32px;
   font-weight: 600;
   width: 78%;
   margin-top: 20px;
 }
-body .bg-2 #schedule .schedule-content {
+.bg-2 #schedule .schedule-content {
   border-radius: 20px;
   box-shadow: 0 20px 20px rgba(111, 66, 193, 0.3);
   position: relative;
 }
-body .bg-2 #schedule .schedule-content .days {
+.bg-2 #schedule .schedule-content .days {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -454,12 +475,12 @@ body .bg-2 #schedule .schedule-content .days {
   margin-bottom: 50px;
   margin-top: 100px;
 }
-body .bg-2 #schedule .schedule-content .days p:hover {
+.bg-2 #schedule .schedule-content .days p:hover {
   color: #6f42c1;
   cursor: pointer;
   position: relative;
 }
-body .bg-2 #schedule .schedule-content .days p:hover::after {
+.bg-2 #schedule .schedule-content .days p:hover::after {
   content: "";
   width: 10px;
   height: 10px;
@@ -469,10 +490,10 @@ body .bg-2 #schedule .schedule-content .days p:hover::after {
   bottom: -12px;
   left: calc(50% - 5px);
 }
-body .bg-2 #schedule .schedule-content .cards-wrapper {
+.bg-2 #schedule .schedule-content .cards-wrapper {
   padding: 0 40px;
 }
-body .bg-2 #schedule .schedule-content .cards-wrapper .card {
+.bg-2 #schedule .schedule-content .cards-wrapper .card {
   background-image: url("../../../../assests/images/schedule1.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -487,42 +508,42 @@ body .bg-2 #schedule .schedule-content .cards-wrapper .card {
   align-items: center;
   flex-direction: row;
 }
-body .bg-2 #schedule .schedule-content .cards-wrapper .card:hover {
+.bg-2 #schedule .schedule-content .cards-wrapper .card:hover {
   transform: scale(1.01);
   box-shadow: 0 0 30px rgba(111, 66, 193, 0.3);
 }
-body .bg-2 #schedule .schedule-content .cards-wrapper .card .profile-image {
+.bg-2 #schedule .schedule-content .cards-wrapper .card .profile-image {
   overflow: hidden;
 }
-body .bg-2 #schedule .schedule-content .cards-wrapper .card .name-date-time {
+.bg-2 #schedule .schedule-content .cards-wrapper .card .name-date-time {
   text-align: center;
 }
-body .bg-2 #schedule .schedule-content .cards-wrapper .card .name-date-time .speaker-name p {
+.bg-2 #schedule .schedule-content .cards-wrapper .card .name-date-time .speaker-name p {
   color: #6f42c1;
 }
-body .bg-2 #schedule .schedule-content .cards-wrapper .card .name-date-time .date-time p {
+.bg-2 #schedule .schedule-content .cards-wrapper .card .name-date-time .date-time p {
   font-weight: bold;
   margin-top: 3px;
 }
-body .bg-2 #schedule .schedule-content .cards-wrapper .card .meet-info {
+.bg-2 #schedule .schedule-content .cards-wrapper .card .meet-info {
   width: 40%;
 }
-body .bg-2 #schedule .schedule-content .cards-wrapper .card .meet-info p {
+.bg-2 #schedule .schedule-content .cards-wrapper .card .meet-info p {
   font-family: sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #5a5a5a;
 }
-body .bg-2 #schedule .schedule-content .cards-wrapper .card .meet-info p a {
+.bg-2 #schedule .schedule-content .cards-wrapper .card .meet-info p a {
   text-decoration: none;
 }
-body .bg-2 #schedule .schedule-content .cards-wrapper .card .card-btn {
+.bg-2 #schedule .schedule-content .cards-wrapper .card .card-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
 }
-body .bg-2 #schedule .schedule-content .cards-wrapper .card .card-btn button {
+.bg-2 #schedule .schedule-content .cards-wrapper .card .card-btn button {
   width: 142px;
   height: 48px;
   background: linear-gradient(to right, #7B68EE, #e600ff);
@@ -533,16 +554,16 @@ body .bg-2 #schedule .schedule-content .cards-wrapper .card .card-btn button {
   border-radius: 26px;
   border: none;
 }
-body .bg-2 #schedule .schedule-content .cards-wrapper .card .card-btn button:hover {
+.bg-2 #schedule .schedule-content .cards-wrapper .card .card-btn button:hover {
   background: #6f42c1;
   cursor: pointer;
 }
-body .bg-2 #schedule .schedule-content .cards-wrapper .schedule-foot {
+.bg-2 #schedule .schedule-content .cards-wrapper .schedule-foot {
   text-align: center;
   padding-top: 16px;
   padding-bottom: 56px;
 }
-body .bg-2 #schedule .schedule-content .cards-wrapper .schedule-foot button {
+.bg-2 #schedule .schedule-content .cards-wrapper .schedule-foot button {
   width: 142px;
   height: 48px;
   background: linear-gradient(to right, #7B68EE, #e600ff);
@@ -556,14 +577,14 @@ body .bg-2 #schedule .schedule-content .cards-wrapper .schedule-foot button {
   color: #6f42c1;
   border: 2px solid #6f42c1;
 }
-body .bg-2 #schedule .schedule-content .cards-wrapper .schedule-foot button:hover {
+.bg-2 #schedule .schedule-content .cards-wrapper .schedule-foot button:hover {
   background: #6f42c1;
   cursor: pointer;
 }
-body .bg-2 #schedule .schedule-content .cards-wrapper .schedule-foot button:hover {
+.bg-2 #schedule .schedule-content .cards-wrapper .schedule-foot button:hover {
   color: white;
 }
-body .bg-2 #schedule .schedule-dots2 {
+.bg-2 #schedule .schedule-dots2 {
   position: absolute;
   bottom: 30px;
   right: -26px;
@@ -581,11 +602,12 @@ body .bg-2 #schedule .schedule-dots2 {
     transform: translateX(0) translateY(0);
   }
 }
-body #sponsors {
+
+#sponsors {
   width: 100%;
   margin-bottom: 100px;
 }
-body #sponsors .brands {
+#sponsors .brands {
   width: 100%;
   max-width: 1229px;
   display: flex;
@@ -595,7 +617,7 @@ body #sponsors .brands {
   padding: 10px;
   margin-bottom: 80px;
 }
-body #sponsors .brands .brand {
+#sponsors .brands .brand {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -606,7 +628,7 @@ body #sponsors .brands .brand {
   font-size: 20px;
   font-weight: 600;
 }
-body #sponsors .bg-3 {
+#sponsors .bg-3 {
   width: 100%;
   background-image: url("../../../../assests/images/home-conference-video-bg.svg");
   background-size: cover;
@@ -614,7 +636,7 @@ body #sponsors .bg-3 {
   display: flex;
   justify-content: center;
 }
-body #sponsors .bg-3 .sp-content {
+#sponsors .bg-3 .sp-content {
   width: 100%;
   max-width: 1229px;
   display: flex;
@@ -625,11 +647,11 @@ body #sponsors .bg-3 .sp-content {
   width: 100%;
   padding-bottom: 50px;
 }
-body #sponsors .bg-3 .sp-content .images {
+#sponsors .bg-3 .sp-content .images {
   width: 40%;
   position: relative;
 }
-body #sponsors .bg-3 .sp-content .images .dots {
+#sponsors .bg-3 .sp-content .images .dots {
   position: absolute;
   left: 380px;
   top: -250px;
@@ -646,7 +668,7 @@ body #sponsors .bg-3 .sp-content .images .dots {
     transform: translateX(0) translateY(0);
   }
 }
-body #sponsors .bg-3 .sp-content .images .video1 {
+#sponsors .bg-3 .sp-content .images .video1 {
   position: absolute;
   border-radius: 22px;
   overflow: hidden;
@@ -665,33 +687,33 @@ body #sponsors .bg-3 .sp-content .images .video1 {
     transform: translateX(0) translateY(0);
   }
 }
-body #sponsors .bg-3 .sp-content .images .video2 {
+#sponsors .bg-3 .sp-content .images .video2 {
   border-radius: 22px;
   position: absolute;
   overflow: hidden;
   right: -80px;
   top: 36px;
 }
-body #sponsors .bg-3 .sp-content .writes {
+#sponsors .bg-3 .sp-content .writes {
   width: 40%;
   padding-top: 100px;
   display: flex;
   flex-direction: column;
 }
-body #sponsors .bg-3 .sp-content .writes h4 {
+#sponsors .bg-3 .sp-content .writes h4 {
   font-family: sans-serif;
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 42px;
 }
-body #sponsors .bg-3 .sp-content .writes p {
+#sponsors .bg-3 .sp-content .writes p {
   font-family: sans-serif;
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 42px;
   color: #5a5a5a;
 }
-body #sponsors .bg-3 .sp-content .writes .quantity {
+#sponsors .bg-3 .sp-content .writes .quantity {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -701,10 +723,10 @@ body #sponsors .bg-3 .sp-content .writes .quantity {
   margin-bottom: 60px;
   gap: 40px;
 }
-body #sponsors .bg-3 .sp-content .writes .quantity div {
+#sponsors .bg-3 .sp-content .writes .quantity div {
   text-align: start;
 }
-body #sponsors .bg-3 .sp-content .writes .quantity div p:first-child {
+#sponsors .bg-3 .sp-content .writes .quantity div p:first-child {
   background: linear-gradient(to right, #7B68EE, #e600ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -713,17 +735,17 @@ body #sponsors .bg-3 .sp-content .writes .quantity div p:first-child {
   font-weight: 600;
   margin: 0;
 }
-body #sponsors .bg-3 .sp-content .writes .quantity div p:last-child {
+#sponsors .bg-3 .sp-content .writes .quantity div p:last-child {
   font-family: sans-serif;
   font-size: 20px;
   font-weight: 700;
   color: black;
   margin: 0;
 }
-body #sponsors .bg-3 .sp-content .writes .register-btn {
+#sponsors .bg-3 .sp-content .writes .register-btn {
   margin-bottom: 40px;
 }
-body #sponsors .bg-3 .sp-content .writes .register-btn button {
+#sponsors .bg-3 .sp-content .writes .register-btn button {
   width: 142px;
   height: 48px;
   background: linear-gradient(to right, #7B68EE, #e600ff);
@@ -734,21 +756,22 @@ body #sponsors .bg-3 .sp-content .writes .register-btn button {
   border-radius: 26px;
   border: none;
 }
-body #sponsors .bg-3 .sp-content .writes .register-btn button:hover {
+#sponsors .bg-3 .sp-content .writes .register-btn button:hover {
   background: #6f42c1;
   cursor: pointer;
 }
-body #speakers {
+
+#speakers {
   padding: 0 10px;
   display: flex;
   justify-content: center;
 }
-body #speakers .inner-box {
+#speakers .inner-box {
   width: 100%;
   max-width: 1229px;
   border-bottom: 1px solid silver;
 }
-body #speakers .inner-box .top-writes {
+#speakers .inner-box .top-writes {
   padding: 0 100px;
   text-align: center;
   display: flex;
@@ -756,7 +779,7 @@ body #speakers .inner-box .top-writes {
   align-items: center;
   flex-direction: column;
 }
-body #speakers .inner-box .top-writes p {
+#speakers .inner-box .top-writes p {
   background-color: rgba(102, 0, 204, 0.1019607843);
   color: #6f42c1;
   font-size: 14px;
@@ -770,7 +793,7 @@ body #speakers .inner-box .top-writes p {
   align-items: center;
   flex-direction: row;
 }
-body #speakers .inner-box .top-writes h3 {
+#speakers .inner-box .top-writes h3 {
   font-family: sans-serif;
   font-size: 30px;
   font-weight: 600;
@@ -778,7 +801,7 @@ body #speakers .inner-box .top-writes h3 {
   margin-top: 24px;
   margin-bottom: 40px;
 }
-body #speakers .inner-box .cards-wrapper {
+#speakers .inner-box .cards-wrapper {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -786,19 +809,19 @@ body #speakers .inner-box .cards-wrapper {
   flex-direction: row;
   gap: 20px;
 }
-body #speakers .inner-box .cards-wrapper .card .photo {
+#speakers .inner-box .cards-wrapper .card .photo {
   border-radius: 20px;
   overflow: hidden;
   position: relative;
   transition: filter 1s;
 }
-body #speakers .inner-box .cards-wrapper .card .photo::not(:hover) {
+#speakers .inner-box .cards-wrapper .card .photo::not(:hover) {
   transition: filter 1s;
 }
-body #speakers .inner-box .cards-wrapper .card .photo img {
+#speakers .inner-box .cards-wrapper .card .photo img {
   width: 100%;
 }
-body #speakers .inner-box .cards-wrapper .card .photo .icons-box {
+#speakers .inner-box .cards-wrapper .card .photo .icons-box {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -808,10 +831,10 @@ body #speakers .inner-box .cards-wrapper .card .photo .icons-box {
   opacity: 0;
   transition: opacity 1s, bottom 1s;
 }
-body #speakers .inner-box .cards-wrapper .card .photo .icons-box::not(:hover) {
+#speakers .inner-box .cards-wrapper .card .photo .icons-box::not(:hover) {
   transition: opacity 1s, bottom 1s;
 }
-body #speakers .inner-box .cards-wrapper .card .photo .icons-box div {
+#speakers .inner-box .cards-wrapper .card .photo .icons-box div {
   background-color: black;
   display: flex;
   justify-content: center;
@@ -821,40 +844,40 @@ body #speakers .inner-box .cards-wrapper .card .photo .icons-box div {
   height: 40px;
   border-radius: 5px;
 }
-body #speakers .inner-box .cards-wrapper .card .photo .icons-box div a {
+#speakers .inner-box .cards-wrapper .card .photo .icons-box div a {
   color: white;
   text-decoration: none;
 }
-body #speakers .inner-box .cards-wrapper .card .alt-yazi {
+#speakers .inner-box .cards-wrapper .card .alt-yazi {
   text-align: center;
 }
-body #speakers .inner-box .cards-wrapper .card .alt-yazi h5 {
+#speakers .inner-box .cards-wrapper .card .alt-yazi h5 {
   font-family: sans-serif;
   font-size: 18px;
   font-weight: 700;
   margin-top: 30px;
 }
-body #speakers .inner-box .cards-wrapper .card .alt-yazi p {
+#speakers .inner-box .cards-wrapper .card .alt-yazi p {
   font-family: sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #5a5a5a;
   padding-top: 12px;
 }
-body #speakers .inner-box .cards-wrapper .card:hover .photo {
+#speakers .inner-box .cards-wrapper .card:hover .photo {
   filter: brightness(0.7) contrast(1.5);
 }
-body #speakers .inner-box .cards-wrapper .card:hover .icons-box {
+#speakers .inner-box .cards-wrapper .card:hover .icons-box {
   opacity: 1;
   bottom: 40px;
 }
-body #speakers .inner-box .btn-wrapper {
+#speakers .inner-box .btn-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
 }
-body #speakers .inner-box .btn-wrapper button {
+#speakers .inner-box .btn-wrapper button {
   width: 142px;
   height: 48px;
   background: linear-gradient(to right, #7B68EE, #e600ff);
@@ -866,22 +889,23 @@ body #speakers .inner-box .btn-wrapper button {
   border: none;
   margin: 70px 0 90px 0;
 }
-body #speakers .inner-box .btn-wrapper button:hover {
+#speakers .inner-box .btn-wrapper button:hover {
   background: #6f42c1;
   cursor: pointer;
 }
-body #pricing {
+
+#pricing {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   padding: 0 10px;
 }
-body #pricing .inner-box {
+#pricing .inner-box {
   width: 100%;
   max-width: 1229px;
 }
-body #pricing .inner-box .top-writes {
+#pricing .inner-box .top-writes {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -889,7 +913,7 @@ body #pricing .inner-box .top-writes {
   gap: 30px;
   margin-top: 100px;
 }
-body #pricing .inner-box .top-writes p:first-child {
+#pricing .inner-box .top-writes p:first-child {
   background-color: rgba(102, 0, 204, 0.1019607843);
   color: #6f42c1;
   font-size: 14px;
@@ -903,20 +927,20 @@ body #pricing .inner-box .top-writes p:first-child {
   align-items: center;
   flex-direction: row;
 }
-body #pricing .inner-box .top-writes h3 {
+#pricing .inner-box .top-writes h3 {
   font-family: sans-serif;
   font-size: 30px;
   font-weight: 600;
   max-width: 900px;
 }
-body #pricing .inner-box .top-writes p:last-child {
+#pricing .inner-box .top-writes p:last-child {
   font-family: sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: #5a5a5a;
   max-width: 900px;
 }
-body #pricing .inner-box .cards-wrapper {
+#pricing .inner-box .cards-wrapper {
   padding-bottom: 120px;
   margin: 0 40px;
   margin-top: 46px;
@@ -928,7 +952,7 @@ body #pricing .inner-box .cards-wrapper {
   flex-direction: row;
   gap: 24px;
 }
-body #pricing .inner-box .cards-wrapper .card {
+#pricing .inner-box .cards-wrapper .card {
   background-color: rgba(111, 66, 193, 0.04);
   border-radius: 20px;
   border: 1px solid silver;
@@ -936,39 +960,39 @@ body #pricing .inner-box .cards-wrapper .card {
   width: 100%;
   padding: 40px 24px;
 }
-body #pricing .inner-box .cards-wrapper .card .card-head {
+#pricing .inner-box .cards-wrapper .card .card-head {
   display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: row;
   gap: 10px;
 }
-body #pricing .inner-box .cards-wrapper .card .card-head p {
+#pricing .inner-box .cards-wrapper .card .card-head p {
   font-size: 14px;
 }
-body #pricing .inner-box .cards-wrapper .card .card-head i {
+#pricing .inner-box .cards-wrapper .card .card-head i {
   color: #3ab33a;
 }
-body #pricing .inner-box .cards-wrapper .card .price {
+#pricing .inner-box .cards-wrapper .card .price {
   display: flex;
   justify-content: start;
   align-items: end;
   flex-direction: row;
   margin-top: 34px;
 }
-body #pricing .inner-box .cards-wrapper .card .price p:first-child {
+#pricing .inner-box .cards-wrapper .card .price p:first-child {
   font-family: sans-serif;
   font-size: 40px;
   font-weight: 600;
   color: #7B68EE;
 }
-body #pricing .inner-box .cards-wrapper .card .price p:last-child {
+#pricing .inner-box .cards-wrapper .card .price p:last-child {
   font-family: sans-serif;
   font-size: 18px;
   font-weight: 550;
   color: #5a5a5a;
 }
-body #pricing .inner-box .cards-wrapper .card .inner-writes .setir {
+#pricing .inner-box .cards-wrapper .card .inner-writes .setir {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -976,15 +1000,15 @@ body #pricing .inner-box .cards-wrapper .card .inner-writes .setir {
   gap: 8px;
   margin-top: 14px;
 }
-body #pricing .inner-box .cards-wrapper .card .inner-writes .setir i {
+#pricing .inner-box .cards-wrapper .card .inner-writes .setir i {
   color: #3ab33a;
 }
-body #pricing .inner-box .cards-wrapper .card .btn-box {
+#pricing .inner-box .cards-wrapper .card .btn-box {
   display: flex;
   justify-content: center;
   margin-top: 34px;
 }
-body #pricing .inner-box .cards-wrapper .card .btn-box button {
+#pricing .inner-box .cards-wrapper .card .btn-box button {
   width: 142px;
   height: 48px;
   background: linear-gradient(to right, #7B68EE, #e600ff);
@@ -995,32 +1019,33 @@ body #pricing .inner-box .cards-wrapper .card .btn-box button {
   border-radius: 26px;
   border: none;
 }
-body #pricing .inner-box .cards-wrapper .card .btn-box button:hover {
+#pricing .inner-box .cards-wrapper .card .btn-box button:hover {
   background: #6f42c1;
   cursor: pointer;
 }
-body #pricing .inner-box .cards-wrapper .card .card-foot {
+#pricing .inner-box .cards-wrapper .card .card-foot {
   text-align: center;
   margin-top: 24px;
   margin-bottom: 10px;
 }
-body #pricing .inner-box .cards-wrapper .card .card-foot p {
+#pricing .inner-box .cards-wrapper .card .card-foot p {
   font-family: sans-serif;
   font-size: 14px;
   font-weight: 540;
   color: #5a5a5a;
 }
-body #pricing .inner-box .cards-wrapper .card:hover {
+#pricing .inner-box .cards-wrapper .card:hover {
   background-color: white;
   border: 1px solid white;
   box-shadow: 0 0 30px rgba(111, 66, 193, 0.3);
 }
-body #contact {
+
+#contact {
   padding: 0 10px;
   display: flex;
   justify-content: center;
 }
-body #contact .inner-box {
+#contact .inner-box {
   width: 100%;
   max-width: 1229px;
   margin-top: 80px;
@@ -1029,7 +1054,7 @@ body #contact .inner-box {
   align-items: center;
   flex-direction: column;
 }
-body #contact .inner-box .contact-head {
+#contact .inner-box .contact-head {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1037,7 +1062,7 @@ body #contact .inner-box .contact-head {
   padding: 0 160px;
   text-align: center;
 }
-body #contact .inner-box .contact-head p {
+#contact .inner-box .contact-head p {
   background-color: rgba(102, 0, 204, 0.1019607843);
   color: #6f42c1;
   font-size: 14px;
@@ -1051,14 +1076,14 @@ body #contact .inner-box .contact-head p {
   align-items: center;
   flex-direction: row;
 }
-body #contact .inner-box .contact-head h3 {
+#contact .inner-box .contact-head h3 {
   font-family: sans-serif;
   font-size: 30px;
   font-weight: 600;
   max-width: 900px;
   margin-top: 20px;
 }
-body #contact .inner-box .content {
+#contact .inner-box .content {
   width: 100%;
   margin-bottom: 100px;
   margin-top: 40px;
@@ -1072,7 +1097,7 @@ body #contact .inner-box .content {
   flex-direction: row;
   gap: 68px;
 }
-body #contact .inner-box .content .left {
+#contact .inner-box .content .left {
   background-image: url(../../../../assests/images/contact-bg.png);
   background-size: 100% 100%;
   flex-wrap: nowrap;
@@ -1081,23 +1106,23 @@ body #contact .inner-box .content .left {
   border-radius: 26px;
   overflow: hidden;
 }
-body #contact .inner-box .content .left .left-head {
+#contact .inner-box .content .left .left-head {
   color: white;
 }
-body #contact .inner-box .content .left .left-head p:first-child {
+#contact .inner-box .content .left .left-head p:first-child {
   font-family: sans-serif;
   font-size: 22px;
   font-weight: 600;
   margin-top: 4px;
 }
-body #contact .inner-box .content .left .left-head p:last-child {
+#contact .inner-box .content .left .left-head p:last-child {
   font-family: sans-serif;
   font-size: 16px;
   font-weight: 500;
   max-width: 80%;
   padding-top: 20px;
 }
-body #contact .inner-box .content .left .tools-wrapper {
+#contact .inner-box .content .left .tools-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1105,7 +1130,7 @@ body #contact .inner-box .content .left .tools-wrapper {
   gap: 16px;
   margin-top: 32px;
 }
-body #contact .inner-box .content .left .tools-wrapper .contact-tool {
+#contact .inner-box .content .left .tools-wrapper .contact-tool {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1118,15 +1143,15 @@ body #contact .inner-box .content .left .tools-wrapper .contact-tool {
   padding: 18px 20px;
   width: 100%;
 }
-body #contact .inner-box .content .left .tools-wrapper .contact-tool i {
+#contact .inner-box .content .left .tools-wrapper .contact-tool i {
   color: white;
   font-size: 24px;
 }
-body #contact .inner-box .content .left .tools-wrapper .contact-tool a {
+#contact .inner-box .content .left .tools-wrapper .contact-tool a {
   text-decoration: none;
   color: white;
 }
-body #contact .inner-box .content .form {
+#contact .inner-box .content .form {
   width: 60%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1135,7 +1160,7 @@ body #contact .inner-box .content .form {
   grid-row-gap: 0;
   margin-top: 80px;
 }
-body #contact .inner-box .content .form div {
+#contact .inner-box .content .form div {
   display: flex;
   justify-content: start;
   align-items: start;
@@ -1143,7 +1168,7 @@ body #contact .inner-box .content .form div {
   gap: 10px;
   color: rgb(115, 115, 115);
 }
-body #contact .inner-box .content .form div input {
+#contact .inner-box .content .form div input {
   width: 100%;
   height: 50px;
   border-radius: 5px;
@@ -1151,7 +1176,7 @@ body #contact .inner-box .content .form div input {
   background-color: rgb(243, 243, 243);
   border: none;
 }
-body #contact .inner-box .content .form div textarea {
+#contact .inner-box .content .form div textarea {
   width: 100%;
   height: 100px;
   border-radius: 5px;
@@ -1159,28 +1184,28 @@ body #contact .inner-box .content .form div textarea {
   background-color: rgb(243, 243, 243);
   border: none;
 }
-body #contact .inner-box .content .form div:nth-child(1) {
+#contact .inner-box .content .form div:nth-child(1) {
   grid-area: 1/1/2/2;
 }
-body #contact .inner-box .content .form div:nth-child(2) {
+#contact .inner-box .content .form div:nth-child(2) {
   grid-area: 1/2/2/3;
 }
-body #contact .inner-box .content .form div:nth-child(3) {
+#contact .inner-box .content .form div:nth-child(3) {
   grid-area: 2/1/3/2;
 }
-body #contact .inner-box .content .form div:nth-child(4) {
+#contact .inner-box .content .form div:nth-child(4) {
   grid-area: 2/2/3/3;
 }
-body #contact .inner-box .content .form div:nth-child(5) {
+#contact .inner-box .content .form div:nth-child(5) {
   grid-area: 3/1/4/3;
 }
-body #contact .inner-box .content .form div:nth-child(6) {
+#contact .inner-box .content .form div:nth-child(6) {
   grid-area: 4/1/5/3;
 }
-body #contact .inner-box .content .form .btn-wrapper {
+#contact .inner-box .content .form .btn-wrapper {
   margin-top: 20px;
 }
-body #contact .inner-box .content .form .btn-wrapper button {
+#contact .inner-box .content .form .btn-wrapper button {
   width: 142px;
   height: 48px;
   background: linear-gradient(to right, #7B68EE, #e600ff);
@@ -1191,11 +1216,12 @@ body #contact .inner-box .content .form .btn-wrapper button {
   border-radius: 26px;
   border: none;
 }
-body #contact .inner-box .content .form .btn-wrapper button:hover {
+#contact .inner-box .content .form .btn-wrapper button:hover {
   background: #6f42c1;
   cursor: pointer;
 }
-body footer {
+
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1203,7 +1229,7 @@ body footer {
   background-image: url("../../../../assests/images/footer-bg.png");
   padding: 0 10px;
 }
-body footer .inner-box {
+footer .inner-box {
   width: 100%;
   max-width: 1229px;
   display: grid;
@@ -1218,7 +1244,7 @@ body footer .inner-box {
   margin-left: 40px;
   margin-right: 40px;
 }
-body footer .inner-box .eventor {
+footer .inner-box .eventor {
   grid-area: 1/1/2/2;
   display: flex;
   justify-content: start;
@@ -1226,21 +1252,21 @@ body footer .inner-box .eventor {
   flex-direction: column;
   gap: 40px;
 }
-body footer .inner-box .eventor .write {
+footer .inner-box .eventor .write {
   line-height: 1.3;
   font-family: sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: silver;
 }
-body footer .inner-box .eventor .icons-wrapper {
+footer .inner-box .eventor .icons-wrapper {
   display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: row;
   gap: 12px;
 }
-body footer .inner-box .eventor .icons-wrapper .icon {
+footer .inner-box .eventor .icons-wrapper .icon {
   background-color: black;
   display: flex;
   justify-content: center;
@@ -1250,51 +1276,51 @@ body footer .inner-box .eventor .icons-wrapper .icon {
   height: 40px;
   border-radius: 5px;
 }
-body footer .inner-box .eventor .icons-wrapper .icon:hover {
+footer .inner-box .eventor .icons-wrapper .icon:hover {
   background: linear-gradient(#e600ff, #6f42c1);
 }
-body footer .inner-box .eventor .icons-wrapper .icon a {
+footer .inner-box .eventor .icons-wrapper .icon a {
   color: white;
   text-decoration: none;
 }
-body footer .inner-box .about {
+footer .inner-box .about {
   grid-area: 1/2/2/3;
 }
-body footer .inner-box .enterprice {
+footer .inner-box .enterprice {
   grid-area: 1/3/2/4;
 }
-body footer .inner-box .contact {
+footer .inner-box .contact {
   grid-area: 1/4/2/5;
 }
-body footer .inner-box .about p,
-body footer .inner-box .enterprice p,
-body footer .inner-box .contact p {
+footer .inner-box .about p,
+footer .inner-box .enterprice p,
+footer .inner-box .contact p {
   font-family: sans-serif;
   font-size: 18px;
   font-weight: 560;
   margin-bottom: 46px;
 }
-body footer .inner-box .about ul,
-body footer .inner-box .enterprice ul,
-body footer .inner-box .contact ul {
+footer .inner-box .about ul,
+footer .inner-box .enterprice ul,
+footer .inner-box .contact ul {
   display: flex;
   justify-content: start;
   align-items: start;
   flex-direction: column;
   gap: 30px;
 }
-body footer .inner-box .about ul li,
-body footer .inner-box .enterprice ul li,
-body footer .inner-box .contact ul li {
+footer .inner-box .about ul li,
+footer .inner-box .enterprice ul li,
+footer .inner-box .contact ul li {
   list-style-type: none;
 }
-body footer .inner-box .about ul li a,
-body footer .inner-box .enterprice ul li a,
-body footer .inner-box .contact ul li a {
+footer .inner-box .about ul li a,
+footer .inner-box .enterprice ul li a,
+footer .inner-box .contact ul li a {
   text-decoration: none;
   color: silver;
 }
-body footer .footer-end {
+footer .footer-end {
   width: 100%;
   max-width: 1229px;
   display: flex;
@@ -1304,11 +1330,17 @@ body footer .footer-end {
   margin-top: 100px;
   margin-bottom: 16px;
 }
-body footer .footer-end p {
+footer .footer-end p {
   color: silver;
 }
 
 @media screen and (max-width: 991px) {
+  body header .inner-box nav {
+    display: none;
+  }
+  body header .inner-box .right .burger-menu {
+    display: inline-block;
+  }
   body .bash-hisse #homePages .yuxari {
     display: flex;
   }
@@ -1529,5 +1561,122 @@ body footer .footer-end p {
   }
   body footer .footer-end {
     margin-top: 62px;
+  }
+}
+@media screen and (max-width: 767px) {
+  body .bash-hisse #homePages .yuxari {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column-reverse;
+  }
+  body .bash-hisse #homePages .yuxari h2 {
+    font-size: 80px;
+    top: 522px;
+  }
+  body .bash-hisse #homePages .yuxari .content {
+    width: 100%;
+  }
+  body .bash-hisse #homePages .yuxari .content .yazi {
+    width: 100%;
+  }
+  body .bash-hisse #homePages .yuxari .iframe-div {
+    width: 70%;
+    height: 54vw;
+    max-width: 400px;
+    max-height: 300px;
+  }
+  body .ashagi .conf-contact .contact-tool {
+    width: 100%;
+  }
+  body .bg-2 #about .yazi h3 {
+    font-size: 22px;
+  }
+  body .bg-2 #about .about-cards {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+  }
+  body .bg-2 #about .about-cards div {
+    width: 100%;
+  }
+  body .bg-2 #schedule .schedule-head h3 {
+    font-size: 22px;
+    width: 100%;
+  }
+  body .bg-2 #schedule .schedule-content .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  body .bg-2 #schedule .schedule-content .days p {
+    margin-top: 10px;
+  }
+  body .bg-2 #schedule .schedule-content .days p:nth-child(1) {
+    grid-area: 1/1/2/2;
+  }
+  body .bg-2 #schedule .schedule-content .days p:nth-child(2) {
+    grid-area: 1/3/2/4;
+  }
+  body .bg-2 #schedule .schedule-content .days p:nth-child(3) {
+    grid-area: 1/5/2/6;
+  }
+  body .bg-2 #schedule .schedule-content .days p:nth-child(4) {
+    grid-area: 1/7/2/8;
+  }
+  body .bg-2 #schedule .schedule-content .days p:nth-child(5) {
+    grid-area: 2/2/3/3;
+  }
+  body .bg-2 #schedule .schedule-content .days p:nth-child(6) {
+    grid-area: 2/4/3/5;
+  }
+  body .bg-2 #schedule .schedule-content .days p:nth-child(7) {
+    grid-area: 2/6/3/7;
+  }
+  body #sponsors .brands {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  body #sponsors .bg-3 .sp-content .images {
+    gap: 0;
+  }
+  body #sponsors .bg-3 .sp-content .writes {
+    padding-left: 0;
+  }
+  body #sponsors .bg-3 .sp-content .writes h4 {
+    font-size: 24px;
+  }
+  body #sponsors .bg-3 .sp-content .writes p {
+    line-height: 1.5;
+  }
+  body #speakers .inner-box .top-writes {
+    padding: 0;
+  }
+  body #speakers .inner-box .top-writes h3 {
+    font-size: 22px;
+  }
+  body #speakers .inner-box .cards-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  body #pricing .inner-box .top-writes h3 {
+    font-size: 22px;
+  }
+  body #pricing .inner-box .cards-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  body footer .inner-box {
+    display: flex;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=index.css.map */

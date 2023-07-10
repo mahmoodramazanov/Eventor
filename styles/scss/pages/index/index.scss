@@ -10,924 +10,925 @@ body {
     top: 0;
     z-index: 4;
     padding: 0 $umumi-padding;
-
-    div {
-      @include flex(space-between, center, row);
-      width: 100%;
-      @include max-hudud($laptop-max);
-      padding: 6px 0;
-      nav {
-        ul {
-          display: flex;
-          gap: 20px;
-          li {
-            list-style-type: none;
-            a {
-              text-decoration: none;
-              &:hover {
-                cursor: pointer;
-              }
-            }
-          }
-        }
-      }
+    .inner-box {
       .right {
-        @include flex(right, center, row);
-        gap: 15px;
-        i {
-          font-size: 26px;
-          &:hover {
-            cursor: pointer;
-          }
-        }
-        button {
-          @include btn-blue-purple;
-        }
-      }
-    }
-  }
-  .bash-hisse {
-    background-image: url("../../../../assests/images/home-conference-video-bg.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 20px $umumi-padding;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    #homePages {
-      @include max-hudud($laptop-max);
-      margin: auto;
-      position: relative;
-      .yuxari {
-        // height: 720px;
-        padding-top: 180px;
-        @include flex(space-between, start, row);
-        position: relative;
-        h2 {
-          position: absolute;
-          top: 388px;
-          left: -20px;
-          color: rgba(#ffffff, 0.7);
-          @include font(sans-serif, 190px, bolder);
-          @include animation-lr(toRight-slow, 60px, 0, 8s);
-          min-width: 1000px;
-        }
-        img {
-          position: absolute;
-          &:nth-child(1) {
-            top: 60px;
-            left: 0;
-            @include animation-lr(toRight, 70px, 0, 7s);
+        .burger-menu {
+          width: 34px;
+          height: 34px;
+          padding: 5px;
+          border-radius: 3px;
+          background-color: blue;
+          display: none;
+          position: relative;
+          div {
+            // width: 24px;
+            // max-height: 1px;
+            background-color: rgb(170, 115, 115);
+            // position: absolute;
+            // &:nth-child(1){
+            //   top: 5px;
           }
           &:nth-child(2) {
             top: 10px;
-            right: $umumi-padding;
-            @include animation-lr(toRight, 70px, 0, 7s);
           }
           &:nth-child(3) {
-            bottom: -136px;
-            left: calc(100% - $umumi-padding);
-            @include animation-lr(toRight-slow, -60px, 0, 8s);
-          }
-        }
-        .content {
-          z-index: 1;
-          .yazi {
-            h3 {
-              @include font(sans-serif, 58px, 700);
-            }
-            p {
-              @include font(sans-serif, 20px, 400);
-              margin: 36px 0;
-            }
-          }
-          .btns {
-            padding: 36px 0;
-            button {
-              @include btn-blue-purple;
-            }
-            & button:last-child {
-              color: $purple;
-              background: transparent;
-              &:hover {
-                background: $purple;
-                color: $white;
-              }
-            }
-            margin-bottom: 220px;
-          }
-        }
-        .iframe-div {
-          width: 30%;
-          max-height: 300px;
-          height: 22vw;
-          iframe {
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            border-radius: 20px;
-            @include animation-lr(toBottom, 0, -36px, 7s);
+            top: 25px;
           }
         }
       }
     }
   }
-  .ashagi {
-    padding: 0 $umumi-padding;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .timer {
-      @include max-hudud($laptop-max);
-      height: 187px;
-      width: 100%;
-      background-image: url("../../../../assests/images/timer-bg.png");
-      background-size: 100% 187px;
-      background-repeat: no-repeat;
-      position: relative;
-      top: -100px;
-      padding-left: 26px;
-      padding-right: 26px;
-      @include flex(space-around, center, row);
-      z-index: 1;
-      box-shadow: 0 20px 120px rgba(111, 66, 193, 0.4);
-      border-radius: 22px;
 
-      .time-unit {
-        text-align: center;
-        p:first-child {
-          background: linear-gradient(to right, $blue, $light-purple);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          @include font(sans-serif, 52px, 600);
-        }
-        p:last-child {
-          @include font(sans-serif, 20px, 700);
-          padding-top: 18px;
-        }
-      }
-    }
-    .conf-contact {
-      @include max-hudud($laptop-max);
-      position: relative;
-      width: 100%;
-      @include flex(space-between, center, row);
-      
-      gap: 20px;
-      flex-wrap: nowrap;
-      .contact-tool {
-        @include flex(center, center, row);
-        gap: 10px;
-        height: 66px;
-        width: calc((100% - 40px) / 3);
-        min-width: 300px;
-        border: 1px solid black;
-        border-radius: 5px;
-        i {
-          color: purple;
-          font-size: 24px;
-        }
-        a {
-          text-decoration: none;
-          color: black;
-        }
-      }
-    }
-  }
-  .bg-2 {
-    @include flex(center, center, column);
-    #about {
-      @include max-hudud($laptop-max);
-      @include flex(center, center, column);
-      padding: 0 $umumi-padding;
-      text-align: center;
-      .about-oval {
-        @include inf-cherchive;
-        margin-top: 120px;
-      }
-      .yazi {
-        h3 {
-          @include font(sans-serif, 40px, 580);
-          padding: 20px 8%;
-        }
-        p {
-          @include font(sans-serif, 18px, 500);
-          color: silver;
-          padding: 20px 8%;
-        }
-      }
-      .about-cards {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr;
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
-        margin-top: 30px;
-        padding-bottom: 90px;
-        border-bottom: 1px solid silver;
-        div {
-          position: relative;
-          img {
-            width: 100%;
-            height: 100%;
-          }
-          .date-info {
-            position: absolute;
-            bottom: 15%;
-            left: 40px;
-            text-align: start;
-            p:first-child {
-              @include font(sans-serif, 16px, 500);
-              color: white;
-            }
-            p:last-child {
-              @include font(sans-serif, 18px, 600);
-              color: white;
-              margin-top: 20px;
-            }
-          }
-          .play {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(#f0eded, 0.8);
-            @include flex(center, center, row);
-            position: absolute;
-            bottom: 18%;
-            right: 10%;
-            border-radius: 5px;
-            &:hover {
-              background-color: $purple;
-            }
-          }
-        }
-        div:nth-child(1) {
-          grid-area: 1 / 1 / 2 / 3;
-        }
-        div:nth-child(2) {
-          grid-area: 1 / 3 / 2 /4;
-        }
-        div:nth-child(3) {
-          grid-area: 1 / 4 / 2 / 5;
-        }
-      }
-    }
-    #schedule {
-      width: 100%;
-      position: relative;
-      @include max-hudud($laptop-max);
-      padding: 96px $umumi-padding;
-      .schedule-head {
-        @include flex(center, center, column);
-
-        text-align: center;
-        div {
-          @include inf-cherchive;
-        }
-        h3 {
-          @include font(sans-serif, 32px, 600);
-          width: 78%;
-          margin-top: 20px;
-        }
-      }
-      .schedule-content {
-        // .days {
-        //   display: grid;
-        //   grid-template-columns: repeat(7, 1fr);
-        //   grid-template-rows: 1fr;
-        //   grid-column-gap: 20px;
-        //   grid-row-gap: 0px;
-        //   p:nth-child(1){
-        //     grid-area: 1 / 1 / 2 / 2;
-        //   }
-        //   p:nth-child(2){
-        //     grid-area: 1 / 2 / 2 / 3;
-        //   }
-        //   p:nth-child(3){
-        //     grid-area: 1 / 3 / 2 / 4;
-        //   }
-        //   p:nth-child(4){
-        //     grid-area: 1 / 4 / 2 / 5;
-        //   }
-        //   p:nth-child(5){
-        //     grid-area: 1 / 5 / 2 / 6;
-        //   }
-        //   p:nth-child(6){
-        //     grid-area: 1 / 6 / 2 / 7;
-        //   }
-        //   p:nth-child(7){
-        //     grid-area: 1 / 7 / 2 / 8;
-        //   }
-        // }
-        border-radius: 20px;
-        box-shadow: 0 20px 20px rgba($purple, 0.3);
-        position: relative;
-        .days {
-          @include flex(center, center, row);
-          gap: 30px;
-          margin-bottom: 50px;
-          margin-top: 100px;
-          p:hover {
-            color: $purple;
-            cursor: pointer;
-            position: relative;
-            &::after {
-              content: "";
-              width: 10px;
-              height: 10px;
-              border-radius: 5px;
-              background-color: green;
-              position: absolute;
-              bottom: -12px;
-              left: calc(50% - 5px);
-            }
-          }
-        }
-        .cards-wrapper {
-          padding: 0 40px;
-          .card {
-            background-image: url("../../../../assests/images/schedule1.png");
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            width: 100%;
-            padding: 30px 8%;
-            margin: 30px 0;
-            border-radius: 20px;
-            overflow: hidden;
-            transition: 0.3s;
-            @include flex(space-between, center, row);
-            &:hover {
-              transform: scale(1.01);
-              box-shadow: 0 0 30px rgba($purple, 0.3);
-            }
-            .profile-image {
-              // border-radius: 50%;
-              overflow: hidden;
-            }
-            .name-date-time {
-              text-align: center;
-              .speaker-name {
-                p {
-                  color: $purple;
-                }
-              }
-              .date-time {
-                p {
-                  font-weight: bold;
-                  margin-top: 3px;
-                }
-              }
-            }
-            .meet-info {
-              width: 40%;
-              p {
-                @include font(sans-serif, 14px, 500);
-                color: #5a5a5a;
-                a {
-                  text-decoration: none;
-                }
-              }
-            }
-            .card-btn {
-              @include flex(center, center,row);
-              button {
-                @include btn-blue-purple;
-              }
-            }
-          }
-          .schedule-foot {
-            text-align: center;
-            padding-top: 16px;
-            padding-bottom: 56px;
-            button {
-              @include btn-blue-purple;
-              background: white;
-              color: $purple;
-              border: 2px solid $purple;
-              &:hover {
-                color: white;
-              }
-            }
-          }
-        }
-      }
-      .schedule-dots2 {
-        position: absolute;
-        bottom: 30px;
-        right: -26px;
-        z-index: -1;
-        @include animation-lr(yuxari, 0, -20px, 7s);
-      }
-    }
-  }
-  #sponsors {
+  div {
+    @include flex(space-between, center, row);
     width: 100%;
-    margin-bottom: 100px;
-    .brands {
-      @include max-hudud($laptop-max);
-      @include flex(space-around, center, row);
-      padding: $umumi-padding;
-      margin-bottom: 80px;
-      .brand {
-        @include flex(center, center, row);
-        gap: 10px;
-        color: $brands-font-color;
-        @include font(sans-serif, 20px, 600);
-      }
-    }
-    .bg-3 {
-      width: 100%;
-      background-image: url("../../../../assests/images/home-conference-video-bg.svg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      display: flex;
-      justify-content: center;
-      .sp-content {
-        @include max-hudud($laptop-max);
-        @include flex(center, center, row);
-        gap: 15%;
-        width: 100%;
-        padding-bottom: 50px;
-        .images {
-          width: 40%;
-          position: relative;
-          .dots {
-            position: absolute;
-            left: 380px;
-            top: -250px;
-            @include animation-lr(sola, -60px, 0, 8s);
-          }
-          .video1 {
-            position: absolute;
-            border-radius: 22px;
-            overflow: hidden;
-            top: -200px;
-            left: 0;
-            @include animation-lr(yuxari, 0, 20px, 6s);
-          }
-          .video2 {
-            border-radius: 22px;
-            position: absolute;
-            overflow: hidden;
-            right: -80px;
-            top: 36px;
-          }
-        }
-        .writes {
-          width: 40%;
-          padding-top: 100px;
-          // padding-bottom: 70px;
-          display: flex;
-          flex-direction: column;
-          h4 {
-            @include font(sans-serif, 32px, 600);
-            margin-bottom: 42px;
-          }
-          p {
-            @include font(sans-serif, 18px, 500);
-            margin-bottom: 42px;
-            color: #5a5a5a;
-          }
-          .quantity {
-            @include flex(start, center, row);
-            margin-left: 60px;
-            margin-top: 36px;
-            margin-bottom: 60px;
-            gap: 40px;
-            div {
-              text-align: start;
-              p:first-child {
-                background: linear-gradient(to right, $blue, $light-purple);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                @include font(sans-serif, 52px, 600);
-                margin: 0;
-              }
-              p:last-child {
-                @include font(sans-serif, 20px, 700);
-                color: black;
-                margin: 0;
-              }
-            }
-          }
-          .register-btn {
-            margin-bottom: 40px;
-            button {
-              @include btn-blue-purple;
-            }
-          }
-        }
-      }
-    }
-  }
-  #speakers {
-    padding: 0 $umumi-padding;
-    display: flex;
-    justify-content: center;
-    .inner-box {
-      @include max-hudud($laptop-max);
-      border-bottom: 1px solid silver;
-      .top-writes {
-        padding: 0 100px;
-        text-align: center;
-        @include flex(center, center, column);
-        p {
-          @include inf-cherchive;
-        }
-        h3 {
-          @include font(sans-serif, 30px, 600);
-          max-width: 900px;
-          margin-top: 24px;
-          margin-bottom: 40px;
-        }
-      }
-      .cards-wrapper {
-        width: 100%;
-        @include flex(space-between, center, row);
-        gap: 20px;
-        .card {
-          .photo {
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-            transition: filter 1s;
-            &::not(:hover) {
-              transition: filter 1s;
-            }
-            img {
-              width: 100%;
-            }
-            .icons-box {
-              position: absolute;
-              bottom: 0;
-              left: 50%;
-              transform: translateX(-50%);
-              display: flex;
-              gap: 10px;
-              opacity: 0;
-              transition: opacity 1s, bottom 1s;
-              &::not(:hover) {
-                transition: opacity 1s, bottom 1s;
-              }
-
-              div {
-                background-color: black;
-                @include flex(center, center, row);
-                width: 40px;
-                height: 40px;
-                border-radius: 5px;
-                a {
-                  color: white;
-                  text-decoration: none;
-                }
-              }
-            }
-          }
-          .alt-yazi {
-            text-align: center;
-            h5 {
-              @include font(sans-serif, 18px, 700);
-              margin-top: 30px;
-            }
-            p {
-              @include font(sans-serif, 14px, 500);
-              color: #5a5a5a;
-              padding-top: 12px;
-            }
-          }
-          &:hover {
-            .photo {
-              filter: brightness(0.7) contrast(1.5);
-            }
-            .icons-box {
-              opacity: 1;
-              bottom: 40px;
-            }
-          }
-        }
-      }
-      .btn-wrapper {
-        @include flex(center, center, row);
-        button {
-          @include btn-blue-purple;
-          margin: 70px 0 90px 0;
-        }
-      }
-    }
-  }
-  #pricing {
-    @include flex(center, center, row);
-    padding: 0 $umumi-padding;
-    .inner-box {
-      @include max-hudud($laptop-max);
-      .top-writes {
-        text-align: center;
+    @include max-hudud($laptop-max);
+    padding: 6px 0;
+    nav {
+      ul {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        margin-top: 100px;
-        p:first-child {
-          @include inf-cherchive;
-        }
-        h3 {
-          @include font(sans-serif, 30px, 600);
-          max-width: 900px;
-        }
-        p:last-child {
-          @include font(sans-serif, 18px, 500);
-          color: #5a5a5a;
-          max-width: 900px;
-        }
-      }
-      .cards-wrapper {
-        padding-bottom: 120px;
-        margin: 0 40px;
-        margin-top: 46px;
-        border-bottom: 1px solid silver;
-        margin-bottom: 20px;
-        @include flex(space-between, center, row);
-        gap: 24px;
-        .card {
-          background-color: rgba($purple, 0.04);
-          border-radius: 20px;
-          border: 1px solid silver;
-          overflow: hidden;
-          width: 100%;
-          padding: 40px 24px;
-          .card-head {
-            @include flex(start, center, row);
-            gap: 10px;
-            p {
-              font-size: 14px;
-            }
-            i {
-              color: $light-green;
-            }
-          }
-          .price {
-            @include flex(start, end, row);
-            margin-top: 34px;
-            p:first-child {
-              @include font(sans-serif, 40px, 600);
-              color: $blue;
-            }
-            p:last-child {
-              @include font(sans-serif, 18px, 550);
-              color: #5a5a5a;
-            }
-          }
-          .inner-writes {
-            .setir {
-              @include flex(start, center, row);
-              gap: 8px;
-              margin-top: 14px;
-              i {
-                color: $light-green;
-              }
-            }
-          }
-          .btn-box {
-            display: flex;
-            justify-content: center;
-            margin-top: 34px;
-            button {
-              @include btn-blue-purple;
-            }
-          }
-          .card-foot {
-            text-align: center;
-            margin-top: 24px;
-            margin-bottom: 10px;
-            p {
-              @include font(sans-serif, 14px, 540);
-              color: #5a5a5a;
-            }
-          }
-          &:hover {
-            background-color: white;
-            border: 1px solid white;
-            box-shadow: 0 0 30px rgba($purple, 0.3);
-          }
-        }
-      }
-    }
-  }
-  #contact {
-    padding: 0 $umumi-padding;
-    display: flex;
-    justify-content: center;
-    .inner-box {
-      @include max-hudud($laptop-max);
-      margin-top: 80px;
-      @include flex(center, center, column);
-      .contact-head {
-        @include flex(center, center, column);
-        padding: 0 160px;
-        text-align: center;
-        p {
-          @include inf-cherchive;
-        }
-        h3 {
-          @include font(sans-serif, 30px, 600);
-          max-width: 900px;
-          margin-top: 20px;
-        }
-      }
-      .content {
-        width: 100%;
-        margin-bottom: 100px;
-        margin-top: 40px;
-        box-shadow: 0 28px 28px rgba($purple, 0.3);
-        border-radius: 20px;
-        overflow: hidden;
-        padding: 30px;
-        @include flex(start, center, row);
-        gap: 68px;
-        .left {
-          background-image: url(../../../../assests/images/contact-bg.png);
-          background-size: 100% 100%;
-          flex-wrap: nowrap;
-          width: 30%;
-          padding: 70px 36px;
-          border-radius: 26px;
-          overflow: hidden;
-          .left-head {
-            color: white;
-            p:first-child {
-              @include font(sans-serif, 22px, 600);
-              margin-top: 4px;
-            }
-            p:last-child {
-              @include font(sans-serif, 16px, 500);
-              max-width: 80%;
-              padding-top: 20px;
-            }
-          }
-          .tools-wrapper {
-            @include flex(space-between, center, column);
-            gap: 16px;
-            margin-top: 32px;
-            .contact-tool {
-              @include flex(center, center, row);
-              text-align: center;
-              flex-wrap: wrap;
-              gap: 10px;
-              border: 1px solid white;
-              border-radius: 5px;
-              padding: 18px 20px;
-              width: 100%;
-              i {
-                color: white;
-                font-size: 24px;
-              }
-              a {
-                text-decoration: none;
-                color: white;
-              }
-            }
-          }
-        }
-        .form {
-          width: 60%;
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: repeat(4, 1fr);
-          grid-column-gap: 20px;
-          grid-row-gap: 0;
-          margin-top: 80px;
-          div {
-            @include flex(start, start, column);
-            gap: 10px;
-            color: rgb(115, 115, 115);
-            input {
-              width: 100%;
-              height: 50px;
-              border-radius: 5px;
-              padding-left: 10px;
-              background-color: rgb(243, 243, 243);
-              border: none;
-            }
-            textarea {
-              width: 100%;
-              height: 100px;
-              border-radius: 5px;
-              padding-left: 10px;
-              background-color: rgb(243, 243, 243);
-              border: none;
-            }
-          }
-          div:nth-child(1) {
-            grid-area: 1 / 1 / 2 / 2;
-          }
-          div:nth-child(2) {
-            grid-area: 1 / 2 / 2 / 3;
-          }
-          div:nth-child(3) {
-            grid-area: 2 / 1 / 3 / 2;
-          }
-          div:nth-child(4) {
-            grid-area: 2 / 2 / 3 / 3;
-          }
-          div:nth-child(5) {
-            grid-area: 3 / 1 / 4 / 3;
-          }
-          div:nth-child(6) {
-            grid-area: 4 / 1 / 5 / 3;
-          }
-          .btn-wrapper {
-            margin-top: 20px;
-            button {
-              @include btn-blue-purple;
-            }
-          }
-        }
-      }
-    }
-  }
-  footer {
-    @include flex(center, center, column);
-    background-image: url("../../../../assests/images/footer-bg.png");
-    padding: 0 $umumi-padding;
-    .inner-box {
-      @include max-hudud($laptop-max);
-      display: grid;
-      grid-template-columns: 35% 16% 16% 25%;
-      grid-template-rows: 1fr;
-      grid-column-gap: 60px;
-      grid-row-gap: 0px;
-      color: white;
-      padding-top: 80px;
-      padding-left: 40px;
-      padding-right: 40px;
-      margin-left: 40px;
-      margin-right: 40px;
-      .eventor {
-        grid-area: 1 / 1 / 2 / 2;
-        @include flex(start, start, column);
-        gap: 40px;
-        .write {
-          line-height: 1.3;
-          @include font(sans-serif, 14px, 400);
-          color: silver;
-        }
-        .icons-wrapper {
-          @include flex(start, center, row);
-          gap: 12px;
-          .icon {
-            background-color: black;
-            @include flex(center, center, row);
-            width: 40px;
-            height: 40px;
-            border-radius: 5px;
+        gap: 20px;
+        li {
+          list-style-type: none;
+          a {
+            text-decoration: none;
             &:hover {
-              background: linear-gradient($light-purple, $purple);
-            }
-            a {
-              color: white;
-              text-decoration: none;
-            }
-          }
-        }
-      }
-      .about {
-        grid-area: 1 / 2 / 2 / 3;
-      }
-      .enterprice {
-        grid-area: 1 / 3 / 2 / 4;
-      }
-      .contact {
-        grid-area: 1 / 4 / 2 / 5;
-      }
-      .about,
-      .enterprice,
-      .contact {
-        p {
-          @include font(sans-serif, 18px, 560);
-          margin-bottom: 46px;
-        }
-        ul {
-          @include flex(start, start, column);
-          gap: 30px;
-          li {
-            list-style-type: none;
-            a {
-              text-decoration: none;
-              color: silver;
+              cursor: pointer;
             }
           }
         }
       }
     }
-    .footer-end {
-      @include max-hudud($laptop-max);
-      @include flex(center, center, row);
-      margin-top: 100px;
-      margin-bottom: 16px;
-      p {
-        color: silver;
+    .right {
+      @include flex(right, center, row);
+      gap: 15px;
+      i {
+        font-size: 26px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      button {
+        @include btn-blue-purple;
       }
     }
   }
 }
+.bash-hisse {
+  background-image: url("../../../../assests/images/home-conference-video-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px $umumi-padding;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  #homePages {
+    @include max-hudud($laptop-max);
+    margin: auto;
+    position: relative;
+    .yuxari {
+      // height: 720px;
+      padding-top: 180px;
+      @include flex(space-between, start, row);
+      position: relative;
+      h2 {
+        position: absolute;
+        top: 388px;
+        left: -20px;
+        color: rgba(#ffffff, 0.7);
+        @include font(sans-serif, 190px, bolder);
+        @include animation-lr(toRight-slow, 60px, 0, 8s);
+        min-width: 1000px;
+      }
+      img {
+        position: absolute;
+        &:nth-child(1) {
+          top: 60px;
+          left: 0;
+          @include animation-lr(toRight, 70px, 0, 7s);
+        }
+        &:nth-child(2) {
+          top: 10px;
+          right: $umumi-padding;
+          @include animation-lr(toRight, 70px, 0, 7s);
+        }
+        &:nth-child(3) {
+          bottom: -136px;
+          left: calc(100% - $umumi-padding);
+          @include animation-lr(toRight-slow, -60px, 0, 8s);
+        }
+      }
+      .content {
+        z-index: 1;
+        .yazi {
+          h3 {
+            @include font(sans-serif, 58px, 700);
+          }
+          p {
+            @include font(sans-serif, 20px, 400);
+            margin: 36px 0;
+          }
+        }
+        .btns {
+          padding: 36px 0;
+          margin-bottom: 220px;
+          button {
+            @include btn-blue-purple;
+          }
+          & button:last-child {
+            color: $purple;
+            background: transparent;
+            &:hover {
+              background: $purple;
+              color: $white;
+            }
+          }
+        }
+      }
+      .iframe-div {
+        width: 30%;
+        max-height: 300px;
+        height: 22vw;
+        iframe {
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          border-radius: 20px;
+          @include animation-lr(toBottom, 0, -36px, 7s);
+        }
+      }
+    }
+  }
+}
+.ashagi {
+  padding: 0 $umumi-padding;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .timer {
+    @include max-hudud($laptop-max);
+    height: 187px;
+    width: 100%;
+    background-image: url("../../../../assests/images/timer-bg.png");
+    background-size: 100% 187px;
+    background-repeat: no-repeat;
+    position: relative;
+    top: -100px;
+    padding-left: 26px;
+    padding-right: 26px;
+    @include flex(space-around, center, row);
+    z-index: 1;
+    box-shadow: 0 20px 120px rgba(111, 66, 193, 0.4);
+    border-radius: 22px;
+
+    .time-unit {
+      text-align: center;
+      p:first-child {
+        background: linear-gradient(to right, $blue, $light-purple);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @include font(sans-serif, 52px, 600);
+      }
+      p:last-child {
+        @include font(sans-serif, 20px, 700);
+        padding-top: 18px;
+      }
+    }
+  }
+  .conf-contact {
+    @include max-hudud($laptop-max);
+    position: relative;
+    width: 100%;
+    @include flex(space-between, center, row);
+
+    gap: 20px;
+    flex-wrap: nowrap;
+    .contact-tool {
+      @include flex(center, center, row);
+      gap: 10px;
+      height: 66px;
+      width: calc((100% - 40px) / 3);
+      min-width: 300px;
+      border: 1px solid black;
+      border-radius: 5px;
+      i {
+        color: purple;
+        font-size: 24px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
+.bg-2 {
+  @include flex(center, center, column);
+  #about {
+    @include max-hudud($laptop-max);
+    @include flex(center, center, column);
+    padding: 0 $umumi-padding;
+    text-align: center;
+    .about-oval {
+      @include inf-cherchive;
+      margin-top: 120px;
+    }
+    .yazi {
+      h3 {
+        @include font(sans-serif, 40px, 580);
+        padding: 20px 8%;
+      }
+      p {
+        @include font(sans-serif, 18px, 500);
+        color: silver;
+        padding: 20px 8%;
+      }
+    }
+    .about-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      margin-top: 30px;
+      padding-bottom: 90px;
+      border-bottom: 1px solid silver;
+      div {
+        position: relative;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        .date-info {
+          position: absolute;
+          bottom: 15%;
+          left: 40px;
+          text-align: start;
+          p:first-child {
+            @include font(sans-serif, 16px, 500);
+            color: white;
+          }
+          p:last-child {
+            @include font(sans-serif, 18px, 600);
+            color: white;
+            margin-top: 20px;
+          }
+        }
+        .play {
+          width: 40px;
+          height: 40px;
+          background-color: rgba(#f0eded, 0.8);
+          @include flex(center, center, row);
+          position: absolute;
+          bottom: 18%;
+          right: 10%;
+          border-radius: 5px;
+          &:hover {
+            background-color: $purple;
+          }
+        }
+      }
+      div:nth-child(1) {
+        grid-area: 1 / 1 / 2 / 3;
+      }
+      div:nth-child(2) {
+        grid-area: 1 / 3 / 2 /4;
+      }
+      div:nth-child(3) {
+        grid-area: 1 / 4 / 2 / 5;
+      }
+    }
+  }
+  #schedule {
+    width: 100%;
+    position: relative;
+    @include max-hudud($laptop-max);
+    padding: 96px $umumi-padding;
+    .schedule-head {
+      @include flex(center, center, column);
+
+      text-align: center;
+      div {
+        @include inf-cherchive;
+      }
+      h3 {
+        @include font(sans-serif, 32px, 600);
+        width: 78%;
+        margin-top: 20px;
+      }
+    }
+    .schedule-content {
+      border-radius: 20px;
+      box-shadow: 0 20px 20px rgba($purple, 0.3);
+      position: relative;
+      .days {
+        @include flex(center, center, row);
+        gap: 30px;
+        margin-bottom: 50px;
+        margin-top: 100px;
+        p:hover {
+          color: $purple;
+          cursor: pointer;
+          position: relative;
+          &::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background-color: green;
+            position: absolute;
+            bottom: -12px;
+            left: calc(50% - 5px);
+          }
+        }
+      }
+      .cards-wrapper {
+        padding: 0 40px;
+        .card {
+          background-image: url("../../../../assests/images/schedule1.png");
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          width: 100%;
+          padding: 30px 8%;
+          margin: 30px 0;
+          border-radius: 20px;
+          overflow: hidden;
+          transition: 0.3s;
+          @include flex(space-between, center, row);
+          &:hover {
+            transform: scale(1.01);
+            box-shadow: 0 0 30px rgba($purple, 0.3);
+          }
+          .profile-image {
+            // border-radius: 50%;
+            overflow: hidden;
+          }
+          .name-date-time {
+            text-align: center;
+            .speaker-name {
+              p {
+                color: $purple;
+              }
+            }
+            .date-time {
+              p {
+                font-weight: bold;
+                margin-top: 3px;
+              }
+            }
+          }
+          .meet-info {
+            width: 40%;
+            p {
+              @include font(sans-serif, 14px, 500);
+              color: #5a5a5a;
+              a {
+                text-decoration: none;
+              }
+            }
+          }
+          .card-btn {
+            @include flex(center, center, row);
+            button {
+              @include btn-blue-purple;
+            }
+          }
+        }
+        .schedule-foot {
+          text-align: center;
+          padding-top: 16px;
+          padding-bottom: 56px;
+          button {
+            @include btn-blue-purple;
+            background: white;
+            color: $purple;
+            border: 2px solid $purple;
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+    .schedule-dots2 {
+      position: absolute;
+      bottom: 30px;
+      right: -26px;
+      z-index: -1;
+      @include animation-lr(yuxari, 0, -20px, 7s);
+    }
+  }
+}
+#sponsors {
+  width: 100%;
+  margin-bottom: 100px;
+  .brands {
+    @include max-hudud($laptop-max);
+    @include flex(space-around, center, row);
+    padding: $umumi-padding;
+    margin-bottom: 80px;
+    .brand {
+      @include flex(center, center, row);
+      gap: 10px;
+      color: $brands-font-color;
+      @include font(sans-serif, 20px, 600);
+    }
+  }
+  .bg-3 {
+    width: 100%;
+    background-image: url("../../../../assests/images/home-conference-video-bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    .sp-content {
+      @include max-hudud($laptop-max);
+      @include flex(center, center, row);
+      gap: 15%;
+      width: 100%;
+      padding-bottom: 50px;
+      .images {
+        width: 40%;
+        position: relative;
+        .dots {
+          position: absolute;
+          left: 380px;
+          top: -250px;
+          @include animation-lr(sola, -60px, 0, 8s);
+        }
+        .video1 {
+          position: absolute;
+          border-radius: 22px;
+          overflow: hidden;
+          top: -200px;
+          left: 0;
+          @include animation-lr(yuxari, 0, 20px, 6s);
+        }
+        .video2 {
+          border-radius: 22px;
+          position: absolute;
+          overflow: hidden;
+          right: -80px;
+          top: 36px;
+        }
+      }
+      .writes {
+        width: 40%;
+        padding-top: 100px;
+        // padding-bottom: 70px;
+        display: flex;
+        flex-direction: column;
+        h4 {
+          @include font(sans-serif, 32px, 600);
+          margin-bottom: 42px;
+        }
+        p {
+          @include font(sans-serif, 18px, 500);
+          margin-bottom: 42px;
+          color: #5a5a5a;
+        }
+        .quantity {
+          @include flex(start, center, row);
+          margin-left: 60px;
+          margin-top: 36px;
+          margin-bottom: 60px;
+          gap: 40px;
+          div {
+            text-align: start;
+            p:first-child {
+              background: linear-gradient(to right, $blue, $light-purple);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              @include font(sans-serif, 52px, 600);
+              margin: 0;
+            }
+            p:last-child {
+              @include font(sans-serif, 20px, 700);
+              color: black;
+              margin: 0;
+            }
+          }
+        }
+        .register-btn {
+          margin-bottom: 40px;
+          button {
+            @include btn-blue-purple;
+          }
+        }
+      }
+    }
+  }
+}
+#speakers {
+  padding: 0 $umumi-padding;
+  display: flex;
+  justify-content: center;
+  .inner-box {
+    @include max-hudud($laptop-max);
+    border-bottom: 1px solid silver;
+    .top-writes {
+      padding: 0 100px;
+      text-align: center;
+      @include flex(center, center, column);
+      p {
+        @include inf-cherchive;
+      }
+      h3 {
+        @include font(sans-serif, 30px, 600);
+        max-width: 900px;
+        margin-top: 24px;
+        margin-bottom: 40px;
+      }
+    }
+    .cards-wrapper {
+      width: 100%;
+      @include flex(space-between, center, row);
+      gap: 20px;
+      .card {
+        .photo {
+          border-radius: 20px;
+          overflow: hidden;
+          position: relative;
+          transition: filter 1s;
+          &::not(:hover) {
+            transition: filter 1s;
+          }
+          img {
+            width: 100%;
+          }
+          .icons-box {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            opacity: 0;
+            transition: opacity 1s, bottom 1s;
+            &::not(:hover) {
+              transition: opacity 1s, bottom 1s;
+            }
+
+            div {
+              background-color: black;
+              @include flex(center, center, row);
+              width: 40px;
+              height: 40px;
+              border-radius: 5px;
+              a {
+                color: white;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+        .alt-yazi {
+          text-align: center;
+          h5 {
+            @include font(sans-serif, 18px, 700);
+            margin-top: 30px;
+          }
+          p {
+            @include font(sans-serif, 14px, 500);
+            color: #5a5a5a;
+            padding-top: 12px;
+          }
+        }
+        &:hover {
+          .photo {
+            filter: brightness(0.7) contrast(1.5);
+          }
+          .icons-box {
+            opacity: 1;
+            bottom: 40px;
+          }
+        }
+      }
+    }
+    .btn-wrapper {
+      @include flex(center, center, row);
+      button {
+        @include btn-blue-purple;
+        margin: 70px 0 90px 0;
+      }
+    }
+  }
+}
+#pricing {
+  @include flex(center, center, row);
+  padding: 0 $umumi-padding;
+  .inner-box {
+    @include max-hudud($laptop-max);
+    .top-writes {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin-top: 100px;
+      p:first-child {
+        @include inf-cherchive;
+      }
+      h3 {
+        @include font(sans-serif, 30px, 600);
+        max-width: 900px;
+      }
+      p:last-child {
+        @include font(sans-serif, 18px, 500);
+        color: #5a5a5a;
+        max-width: 900px;
+      }
+    }
+    .cards-wrapper {
+      padding-bottom: 120px;
+      margin: 0 40px;
+      margin-top: 46px;
+      border-bottom: 1px solid silver;
+      margin-bottom: 20px;
+      @include flex(space-between, center, row);
+      gap: 24px;
+      .card {
+        background-color: rgba($purple, 0.04);
+        border-radius: 20px;
+        border: 1px solid silver;
+        overflow: hidden;
+        width: 100%;
+        padding: 40px 24px;
+        .card-head {
+          @include flex(start, center, row);
+          gap: 10px;
+          p {
+            font-size: 14px;
+          }
+          i {
+            color: $light-green;
+          }
+        }
+        .price {
+          @include flex(start, end, row);
+          margin-top: 34px;
+          p:first-child {
+            @include font(sans-serif, 40px, 600);
+            color: $blue;
+          }
+          p:last-child {
+            @include font(sans-serif, 18px, 550);
+            color: #5a5a5a;
+          }
+        }
+        .inner-writes {
+          .setir {
+            @include flex(start, center, row);
+            gap: 8px;
+            margin-top: 14px;
+            i {
+              color: $light-green;
+            }
+          }
+        }
+        .btn-box {
+          display: flex;
+          justify-content: center;
+          margin-top: 34px;
+          button {
+            @include btn-blue-purple;
+          }
+        }
+        .card-foot {
+          text-align: center;
+          margin-top: 24px;
+          margin-bottom: 10px;
+          p {
+            @include font(sans-serif, 14px, 540);
+            color: #5a5a5a;
+          }
+        }
+        &:hover {
+          background-color: white;
+          border: 1px solid white;
+          box-shadow: 0 0 30px rgba($purple, 0.3);
+        }
+      }
+    }
+  }
+}
+#contact {
+  padding: 0 $umumi-padding;
+  display: flex;
+  justify-content: center;
+  .inner-box {
+    @include max-hudud($laptop-max);
+    margin-top: 80px;
+    @include flex(center, center, column);
+    .contact-head {
+      @include flex(center, center, column);
+      padding: 0 160px;
+      text-align: center;
+      p {
+        @include inf-cherchive;
+      }
+      h3 {
+        @include font(sans-serif, 30px, 600);
+        max-width: 900px;
+        margin-top: 20px;
+      }
+    }
+    .content {
+      width: 100%;
+      margin-bottom: 100px;
+      margin-top: 40px;
+      box-shadow: 0 28px 28px rgba($purple, 0.3);
+      border-radius: 20px;
+      overflow: hidden;
+      padding: 30px;
+      @include flex(start, center, row);
+      gap: 68px;
+      .left {
+        background-image: url(../../../../assests/images/contact-bg.png);
+        background-size: 100% 100%;
+        flex-wrap: nowrap;
+        width: 30%;
+        padding: 70px 36px;
+        border-radius: 26px;
+        overflow: hidden;
+        .left-head {
+          color: white;
+          p:first-child {
+            @include font(sans-serif, 22px, 600);
+            margin-top: 4px;
+          }
+          p:last-child {
+            @include font(sans-serif, 16px, 500);
+            max-width: 80%;
+            padding-top: 20px;
+          }
+        }
+        .tools-wrapper {
+          @include flex(space-between, center, column);
+          gap: 16px;
+          margin-top: 32px;
+          .contact-tool {
+            @include flex(center, center, row);
+            text-align: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 18px 20px;
+            width: 100%;
+            i {
+              color: white;
+              font-size: 24px;
+            }
+            a {
+              text-decoration: none;
+              color: white;
+            }
+          }
+        }
+      }
+      .form {
+        width: 60%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 0;
+        margin-top: 80px;
+        div {
+          @include flex(start, start, column);
+          gap: 10px;
+          color: rgb(115, 115, 115);
+          input {
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            padding-left: 10px;
+            background-color: rgb(243, 243, 243);
+            border: none;
+          }
+          textarea {
+            width: 100%;
+            height: 100px;
+            border-radius: 5px;
+            padding-left: 10px;
+            background-color: rgb(243, 243, 243);
+            border: none;
+          }
+        }
+        div:nth-child(1) {
+          grid-area: 1 / 1 / 2 / 2;
+        }
+        div:nth-child(2) {
+          grid-area: 1 / 2 / 2 / 3;
+        }
+        div:nth-child(3) {
+          grid-area: 2 / 1 / 3 / 2;
+        }
+        div:nth-child(4) {
+          grid-area: 2 / 2 / 3 / 3;
+        }
+        div:nth-child(5) {
+          grid-area: 3 / 1 / 4 / 3;
+        }
+        div:nth-child(6) {
+          grid-area: 4 / 1 / 5 / 3;
+        }
+        .btn-wrapper {
+          margin-top: 20px;
+          button {
+            @include btn-blue-purple;
+          }
+        }
+      }
+    }
+  }
+}
+footer {
+  @include flex(center, center, column);
+  background-image: url("../../../../assests/images/footer-bg.png");
+  padding: 0 $umumi-padding;
+  .inner-box {
+    @include max-hudud($laptop-max);
+    display: grid;
+    grid-template-columns: 35% 16% 16% 25%;
+    grid-template-rows: 1fr;
+    grid-column-gap: 60px;
+    grid-row-gap: 0px;
+    color: white;
+    padding-top: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    .eventor {
+      grid-area: 1 / 1 / 2 / 2;
+      @include flex(start, start, column);
+      gap: 40px;
+      .write {
+        line-height: 1.3;
+        @include font(sans-serif, 14px, 400);
+        color: silver;
+      }
+      .icons-wrapper {
+        @include flex(start, center, row);
+        gap: 12px;
+        .icon {
+          background-color: black;
+          @include flex(center, center, row);
+          width: 40px;
+          height: 40px;
+          border-radius: 5px;
+          &:hover {
+            background: linear-gradient($light-purple, $purple);
+          }
+          a {
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .about {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    .enterprice {
+      grid-area: 1 / 3 / 2 / 4;
+    }
+    .contact {
+      grid-area: 1 / 4 / 2 / 5;
+    }
+    .about,
+    .enterprice,
+    .contact {
+      p {
+        @include font(sans-serif, 18px, 560);
+        margin-bottom: 46px;
+      }
+      ul {
+        @include flex(start, start, column);
+        gap: 30px;
+        li {
+          list-style-type: none;
+          a {
+            text-decoration: none;
+            color: silver;
+          }
+        }
+      }
+    }
+  }
+  .footer-end {
+    @include max-hudud($laptop-max);
+    @include flex(center, center, row);
+    margin-top: 100px;
+    margin-bottom: 16px;
+    p {
+      color: silver;
+    }
+  }
+}
+
 @import "./_index-tablet.scss";
+@import "./index-mobile";

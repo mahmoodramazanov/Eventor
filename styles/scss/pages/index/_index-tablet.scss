@@ -1,5 +1,19 @@
 @media screen and (max-width: $tablet-max) {
   body {
+    header {
+      
+      .inner-box {
+        nav {
+          display: none;
+        }
+        .right {
+          .burger-menu {
+            display: inline-block;
+            
+          }
+        }
+      }
+    }
     .bash-hisse {
       #homePages {
         .yuxari {
@@ -218,10 +232,10 @@
           grid-area: 2 / 1 / 3 / 2;
         }
         .contact {
-          grid-area: 2 / 2 / 3 / 3; 
+          grid-area: 2 / 2 / 3 / 3;
         }
       }
-      .footer-end{
+      .footer-end {
         margin-top: 62px;
       }
     }
